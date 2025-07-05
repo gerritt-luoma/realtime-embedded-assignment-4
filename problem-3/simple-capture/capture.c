@@ -950,6 +950,7 @@ int main(int argc, char **argv)
     open_device();
     init_device();
     start_capturing();
+    sleep(1); // TODO: - remove testing change
     mainloop();
     stop_capturing();
     uninit_device();
