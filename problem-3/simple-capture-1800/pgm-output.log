@@ -1,0 +1,953 @@
+Jul 06 17:02:05 arthur capture[1128]: Dump YUYV converted to YY size 614400
+Jul 06 17:02:05 arthur capture[1128]: read_frame took 0.008466 seconds
+Jul 06 17:02:06 arthur capture[1128]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:02:06 arthur capture[1128]: frame 181:
+Jul 06 17:02:06 arthur capture[1128]: wrote 307200 bytes
+Jul 06 17:02:06 arthur capture[1128]: Dump YUYV converted to YY size 614400
+Jul 06 17:02:06 arthur capture[1128]: read_frame took 0.008424 seconds
+Jul 06 17:02:07 arthur capture[1128]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:02:07 arthur capture[1128]: 
+Jul 06 17:02:07 arthur sudo[1126]: pam_unix(sudo:session): session closed for user root
+Jul 06 17:06:54 arthur sudo[1171]:  gerritt : TTY=pts/0 ; PWD=/home/gerritt/repos/realtime-embedded-assignment-4/problem-3/simple-capture-1800 ; USER=root ; COMMAND=./capture
+Jul 06 17:06:54 arthur sudo[1171]: pam_unix(sudo:session): session opened for user root(uid=0) by gerritt(uid=1000)
+Jul 06 17:06:55 arthur kernel: usb 1-1.1: reset high-speed USB device number 3 using xhci_hcd
+Jul 06 17:06:55 arthur capture[1173]: FORCING FORMAT
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 0
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 1
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 2
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 3
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 4
+Jul 06 17:06:55 arthur capture[1173]: allocated buffer 5
+Jul 06 17:06:55 arthur capture[1173]: frame -7:
+Jul 06 17:06:55 arthur capture[1173]: read_frame took 0.007588 seconds
+Jul 06 17:06:56 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:06:56 arthur capture[1173]: frame -6:
+Jul 06 17:06:56 arthur capture[1173]: read_frame took 0.007094 seconds
+Jul 06 17:06:57 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:06:57 arthur capture[1173]: frame -5:
+Jul 06 17:06:57 arthur capture[1173]: read_frame took 0.006938 seconds
+Jul 06 17:06:58 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:06:58 arthur capture[1173]: frame -4:
+Jul 06 17:06:58 arthur capture[1173]: read_frame took 0.007084 seconds
+Jul 06 17:06:59 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:06:59 arthur capture[1173]: frame -3:
+Jul 06 17:06:59 arthur capture[1173]: read_frame took 0.007015 seconds
+Jul 06 17:07:00 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:00 arthur capture[1173]: frame -2:
+Jul 06 17:07:00 arthur capture[1173]: read_frame took 0.007049 seconds
+Jul 06 17:07:01 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:01 arthur capture[1173]: frame -1:
+Jul 06 17:07:01 arthur capture[1173]: read_frame took 0.007102 seconds
+Jul 06 17:07:02 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:02 arthur capture[1173]: frame 0:
+Jul 06 17:07:02 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:02 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:02 arthur capture[1173]: read_frame took 0.009756 seconds
+Jul 06 17:07:03 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:03 arthur capture[1173]: frame 1:
+Jul 06 17:07:03 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:03 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:03 arthur capture[1173]: read_frame took 0.007779 seconds
+Jul 06 17:07:04 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:04 arthur capture[1173]: frame 2:
+Jul 06 17:07:04 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:04 arthur capture[1173]: read_frame took 0.008561 seconds
+Jul 06 17:07:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:05 arthur capture[1173]: frame 3:
+Jul 06 17:07:05 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:05 arthur capture[1173]: read_frame took 0.008089 seconds
+Jul 06 17:07:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:06 arthur capture[1173]: frame 4:
+Jul 06 17:07:06 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:06 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:06 arthur capture[1173]: read_frame took 0.007742 seconds
+Jul 06 17:07:07 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:07 arthur capture[1173]: frame 5:
+Jul 06 17:07:07 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:07 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:07 arthur capture[1173]: read_frame took 0.008484 seconds
+Jul 06 17:07:08 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:08 arthur capture[1173]: frame 6:
+Jul 06 17:07:08 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:08 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:08 arthur capture[1173]: read_frame took 0.008384 seconds
+Jul 06 17:07:09 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:09 arthur capture[1173]: frame 7:
+Jul 06 17:07:09 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:09 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:09 arthur capture[1173]: read_frame took 0.008338 seconds
+Jul 06 17:07:10 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:10 arthur capture[1173]: frame 8:
+Jul 06 17:07:10 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:10 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:10 arthur capture[1173]: read_frame took 0.008131 seconds
+Jul 06 17:07:11 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:11 arthur capture[1173]: frame 9:
+Jul 06 17:07:11 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:11 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:11 arthur capture[1173]: read_frame took 0.008270 seconds
+Jul 06 17:07:12 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:12 arthur capture[1173]: frame 10:
+Jul 06 17:07:12 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:12 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:12 arthur capture[1173]: read_frame took 0.008292 seconds
+Jul 06 17:07:13 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:13 arthur capture[1173]: frame 11:
+Jul 06 17:07:13 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:13 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:13 arthur capture[1173]: read_frame took 0.008451 seconds
+Jul 06 17:07:14 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:14 arthur capture[1173]: frame 12:
+Jul 06 17:07:14 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:14 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:14 arthur capture[1173]: read_frame took 0.008405 seconds
+Jul 06 17:07:15 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:15 arthur capture[1173]: frame 13:
+Jul 06 17:07:15 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:15 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:15 arthur capture[1173]: read_frame took 0.008381 seconds
+Jul 06 17:07:16 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:16 arthur capture[1173]: frame 14:
+Jul 06 17:07:16 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:16 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:16 arthur capture[1173]: read_frame took 0.008456 seconds
+Jul 06 17:07:17 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:17 arthur capture[1173]: frame 15:
+Jul 06 17:07:17 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:17 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:17 arthur capture[1173]: read_frame took 0.007842 seconds
+Jul 06 17:07:18 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:18 arthur capture[1173]: frame 16:
+Jul 06 17:07:18 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:18 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:18 arthur capture[1173]: read_frame took 0.009789 seconds
+Jul 06 17:07:19 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:19 arthur capture[1173]: frame 17:
+Jul 06 17:07:19 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:19 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:19 arthur capture[1173]: read_frame took 0.008388 seconds
+Jul 06 17:07:20 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:20 arthur capture[1173]: frame 18:
+Jul 06 17:07:20 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:20 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:20 arthur capture[1173]: read_frame took 0.008375 seconds
+Jul 06 17:07:21 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:21 arthur capture[1173]: frame 19:
+Jul 06 17:07:21 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:21 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:21 arthur capture[1173]: read_frame took 0.008511 seconds
+Jul 06 17:07:22 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:22 arthur capture[1173]: frame 20:
+Jul 06 17:07:22 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:22 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:22 arthur capture[1173]: read_frame took 0.008405 seconds
+Jul 06 17:07:23 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:23 arthur capture[1173]: frame 21:
+Jul 06 17:07:24 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:24 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:24 arthur capture[1173]: read_frame took 0.008369 seconds
+Jul 06 17:07:25 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:25 arthur capture[1173]: frame 22:
+Jul 06 17:07:25 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:25 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:25 arthur capture[1173]: read_frame took 0.009640 seconds
+Jul 06 17:07:26 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:26 arthur capture[1173]: frame 23:
+Jul 06 17:07:26 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:26 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:26 arthur capture[1173]: read_frame took 0.008448 seconds
+Jul 06 17:07:27 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:27 arthur capture[1173]: frame 24:
+Jul 06 17:07:27 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:27 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:27 arthur capture[1173]: read_frame took 0.008454 seconds
+Jul 06 17:07:28 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:28 arthur capture[1173]: frame 25:
+Jul 06 17:07:28 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:28 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:28 arthur capture[1173]: read_frame took 0.009645 seconds
+Jul 06 17:07:29 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:29 arthur capture[1173]: frame 26:
+Jul 06 17:07:29 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:29 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:29 arthur capture[1173]: read_frame took 0.007256 seconds
+Jul 06 17:07:30 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:30 arthur capture[1173]: frame 27:
+Jul 06 17:07:30 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:30 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:30 arthur capture[1173]: read_frame took 0.008413 seconds
+Jul 06 17:07:31 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:31 arthur capture[1173]: frame 28:
+Jul 06 17:07:31 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:31 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:31 arthur capture[1173]: read_frame took 0.008335 seconds
+Jul 06 17:07:32 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:32 arthur capture[1173]: frame 29:
+Jul 06 17:07:32 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:32 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:32 arthur capture[1173]: read_frame took 0.008341 seconds
+Jul 06 17:07:33 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:33 arthur capture[1173]: frame 30:
+Jul 06 17:07:33 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:33 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:33 arthur capture[1173]: read_frame took 0.008699 seconds
+Jul 06 17:07:34 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:34 arthur capture[1173]: frame 31:
+Jul 06 17:07:34 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:34 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:34 arthur capture[1173]: read_frame took 0.007784 seconds
+Jul 06 17:07:35 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:35 arthur capture[1173]: frame 32:
+Jul 06 17:07:35 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:35 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:35 arthur capture[1173]: read_frame took 0.007892 seconds
+Jul 06 17:07:36 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:36 arthur capture[1173]: frame 33:
+Jul 06 17:07:36 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:36 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:36 arthur capture[1173]: read_frame took 0.008480 seconds
+Jul 06 17:07:37 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:37 arthur capture[1173]: frame 34:
+Jul 06 17:07:37 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:37 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:37 arthur capture[1173]: read_frame took 0.008337 seconds
+Jul 06 17:07:38 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:38 arthur capture[1173]: frame 35:
+Jul 06 17:07:38 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:38 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:38 arthur capture[1173]: read_frame took 0.009705 seconds
+Jul 06 17:07:39 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:39 arthur capture[1173]: frame 36:
+Jul 06 17:07:39 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:39 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:39 arthur capture[1173]: read_frame took 0.008386 seconds
+Jul 06 17:07:40 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:40 arthur capture[1173]: frame 37:
+Jul 06 17:07:40 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:40 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:40 arthur capture[1173]: read_frame took 0.008346 seconds
+Jul 06 17:07:41 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:41 arthur capture[1173]: frame 38:
+Jul 06 17:07:41 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:41 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:41 arthur capture[1173]: read_frame took 0.008416 seconds
+Jul 06 17:07:42 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:42 arthur capture[1173]: frame 39:
+Jul 06 17:07:42 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:42 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:42 arthur capture[1173]: read_frame took 0.008567 seconds
+Jul 06 17:07:43 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:43 arthur capture[1173]: frame 40:
+Jul 06 17:07:43 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:43 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:43 arthur capture[1173]: read_frame took 0.008458 seconds
+Jul 06 17:07:44 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:44 arthur capture[1173]: frame 41:
+Jul 06 17:07:44 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:44 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:44 arthur capture[1173]: read_frame took 0.008466 seconds
+Jul 06 17:07:45 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:45 arthur capture[1173]: frame 42:
+Jul 06 17:07:45 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:45 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:45 arthur capture[1173]: read_frame took 0.008267 seconds
+Jul 06 17:07:46 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:46 arthur capture[1173]: frame 43:
+Jul 06 17:07:46 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:46 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:46 arthur capture[1173]: read_frame took 0.007855 seconds
+Jul 06 17:07:47 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:47 arthur capture[1173]: frame 44:
+Jul 06 17:07:47 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:47 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:47 arthur capture[1173]: read_frame took 0.007780 seconds
+Jul 06 17:07:48 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:48 arthur capture[1173]: frame 45:
+Jul 06 17:07:48 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:48 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:48 arthur capture[1173]: read_frame took 0.007716 seconds
+Jul 06 17:07:49 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:49 arthur capture[1173]: frame 46:
+Jul 06 17:07:49 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:49 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:49 arthur capture[1173]: read_frame took 0.008546 seconds
+Jul 06 17:07:50 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:50 arthur capture[1173]: frame 47:
+Jul 06 17:07:50 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:50 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:50 arthur capture[1173]: read_frame took 0.007763 seconds
+Jul 06 17:07:51 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:51 arthur capture[1173]: frame 48:
+Jul 06 17:07:51 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:51 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:51 arthur capture[1173]: read_frame took 0.008521 seconds
+Jul 06 17:07:52 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:52 arthur capture[1173]: frame 49:
+Jul 06 17:07:52 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:52 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:52 arthur capture[1173]: read_frame took 0.007901 seconds
+Jul 06 17:07:53 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:53 arthur capture[1173]: frame 50:
+Jul 06 17:07:53 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:53 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:53 arthur capture[1173]: read_frame took 0.008638 seconds
+Jul 06 17:07:54 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:54 arthur capture[1173]: frame 51:
+Jul 06 17:07:54 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:54 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:54 arthur capture[1173]: read_frame took 0.009689 seconds
+Jul 06 17:07:55 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:55 arthur capture[1173]: frame 52:
+Jul 06 17:07:55 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:55 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:55 arthur capture[1173]: read_frame took 0.007700 seconds
+Jul 06 17:07:56 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:56 arthur capture[1173]: frame 53:
+Jul 06 17:07:56 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:56 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:56 arthur capture[1173]: read_frame took 0.008330 seconds
+Jul 06 17:07:57 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:57 arthur capture[1173]: frame 54:
+Jul 06 17:07:57 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:57 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:57 arthur capture[1173]: read_frame took 0.008408 seconds
+Jul 06 17:07:58 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:58 arthur capture[1173]: frame 55:
+Jul 06 17:07:58 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:58 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:58 arthur capture[1173]: read_frame took 0.008446 seconds
+Jul 06 17:07:59 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:07:59 arthur capture[1173]: frame 56:
+Jul 06 17:07:59 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:07:59 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:07:59 arthur capture[1173]: read_frame took 0.008478 seconds
+Jul 06 17:08:00 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:00 arthur capture[1173]: frame 57:
+Jul 06 17:08:00 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:00 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:00 arthur capture[1173]: read_frame took 0.008352 seconds
+Jul 06 17:08:01 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:01 arthur capture[1173]: frame 58:
+Jul 06 17:08:01 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:01 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:01 arthur capture[1173]: read_frame took 0.008434 seconds
+Jul 06 17:08:02 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:02 arthur capture[1173]: frame 59:
+Jul 06 17:08:02 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:02 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:02 arthur capture[1173]: read_frame took 0.007746 seconds
+Jul 06 17:08:03 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:03 arthur capture[1173]: frame 60:
+Jul 06 17:08:03 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:03 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:03 arthur capture[1173]: read_frame took 0.011143 seconds
+Jul 06 17:08:04 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:04 arthur capture[1173]: frame 61:
+Jul 06 17:08:04 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:04 arthur capture[1173]: read_frame took 0.008488 seconds
+Jul 06 17:08:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:05 arthur capture[1173]: frame 62:
+Jul 06 17:08:05 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:05 arthur capture[1173]: read_frame took 0.008445 seconds
+Jul 06 17:08:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:06 arthur capture[1173]: frame 63:
+Jul 06 17:08:06 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:06 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:06 arthur capture[1173]: read_frame took 0.008402 seconds
+Jul 06 17:08:07 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:07 arthur capture[1173]: frame 64:
+Jul 06 17:08:07 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:07 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:07 arthur capture[1173]: read_frame took 0.008482 seconds
+Jul 06 17:08:08 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:08 arthur capture[1173]: frame 65:
+Jul 06 17:08:08 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:08 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:08 arthur capture[1173]: read_frame took 0.008375 seconds
+Jul 06 17:08:09 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:09 arthur capture[1173]: frame 66:
+Jul 06 17:08:09 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:09 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:09 arthur capture[1173]: read_frame took 0.008246 seconds
+Jul 06 17:08:10 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:10 arthur capture[1173]: frame 67:
+Jul 06 17:08:10 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:10 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:10 arthur capture[1173]: read_frame took 0.008419 seconds
+Jul 06 17:08:11 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:11 arthur capture[1173]: frame 68:
+Jul 06 17:08:11 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:11 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:11 arthur capture[1173]: read_frame took 0.009069 seconds
+Jul 06 17:08:12 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:12 arthur capture[1173]: frame 69:
+Jul 06 17:08:12 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:12 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:12 arthur capture[1173]: read_frame took 0.008842 seconds
+Jul 06 17:08:13 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:13 arthur capture[1173]: frame 70:
+Jul 06 17:08:13 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:13 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:13 arthur capture[1173]: read_frame took 0.008256 seconds
+Jul 06 17:08:14 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:14 arthur capture[1173]: frame 71:
+Jul 06 17:08:14 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:14 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:14 arthur capture[1173]: read_frame took 0.008272 seconds
+Jul 06 17:08:15 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:15 arthur capture[1173]: frame 72:
+Jul 06 17:08:15 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:15 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:15 arthur capture[1173]: read_frame took 0.007783 seconds
+Jul 06 17:08:16 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:16 arthur capture[1173]: frame 73:
+Jul 06 17:08:16 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:16 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:16 arthur capture[1173]: read_frame took 0.007790 seconds
+Jul 06 17:08:17 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:17 arthur capture[1173]: frame 74:
+Jul 06 17:08:17 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:17 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:17 arthur capture[1173]: read_frame took 0.007836 seconds
+Jul 06 17:08:18 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:18 arthur capture[1173]: frame 75:
+Jul 06 17:08:18 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:18 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:18 arthur capture[1173]: read_frame took 0.008442 seconds
+Jul 06 17:08:19 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:19 arthur capture[1173]: frame 76:
+Jul 06 17:08:19 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:19 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:19 arthur capture[1173]: read_frame took 0.008433 seconds
+Jul 06 17:08:20 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:20 arthur capture[1173]: frame 77:
+Jul 06 17:08:20 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:20 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:20 arthur capture[1173]: read_frame took 0.008103 seconds
+Jul 06 17:08:21 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:21 arthur capture[1173]: frame 78:
+Jul 06 17:08:21 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:21 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:21 arthur capture[1173]: read_frame took 0.007835 seconds
+Jul 06 17:08:22 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:22 arthur capture[1173]: frame 79:
+Jul 06 17:08:22 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:22 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:22 arthur capture[1173]: read_frame took 0.008469 seconds
+Jul 06 17:08:23 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:23 arthur capture[1173]: frame 80:
+Jul 06 17:08:23 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:23 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:23 arthur capture[1173]: read_frame took 0.008406 seconds
+Jul 06 17:08:24 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:24 arthur capture[1173]: frame 81:
+Jul 06 17:08:24 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:24 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:24 arthur capture[1173]: read_frame took 0.008271 seconds
+Jul 06 17:08:25 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:25 arthur capture[1173]: frame 82:
+Jul 06 17:08:25 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:25 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:25 arthur capture[1173]: read_frame took 0.008380 seconds
+Jul 06 17:08:26 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:26 arthur capture[1173]: frame 83:
+Jul 06 17:08:26 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:26 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:26 arthur capture[1173]: read_frame took 0.008663 seconds
+Jul 06 17:08:27 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:27 arthur capture[1173]: frame 84:
+Jul 06 17:08:27 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:27 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:27 arthur capture[1173]: read_frame took 0.008414 seconds
+Jul 06 17:08:28 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:28 arthur capture[1173]: frame 85:
+Jul 06 17:08:28 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:28 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:28 arthur capture[1173]: read_frame took 0.008150 seconds
+Jul 06 17:08:29 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:29 arthur capture[1173]: frame 86:
+Jul 06 17:08:29 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:29 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:29 arthur capture[1173]: read_frame took 0.008453 seconds
+Jul 06 17:08:30 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:30 arthur capture[1173]: frame 87:
+Jul 06 17:08:30 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:30 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:30 arthur capture[1173]: read_frame took 0.008485 seconds
+Jul 06 17:08:31 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:31 arthur capture[1173]: frame 88:
+Jul 06 17:08:31 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:31 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:31 arthur capture[1173]: read_frame took 0.008406 seconds
+Jul 06 17:08:32 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:32 arthur capture[1173]: frame 89:
+Jul 06 17:08:32 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:32 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:32 arthur capture[1173]: read_frame took 0.008243 seconds
+Jul 06 17:08:33 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:33 arthur capture[1173]: frame 90:
+Jul 06 17:08:33 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:33 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:33 arthur capture[1173]: read_frame took 0.008272 seconds
+Jul 06 17:08:34 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:34 arthur capture[1173]: frame 91:
+Jul 06 17:08:34 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:34 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:34 arthur capture[1173]: read_frame took 0.008353 seconds
+Jul 06 17:08:35 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:35 arthur capture[1173]: frame 92:
+Jul 06 17:08:35 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:35 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:35 arthur capture[1173]: read_frame took 0.009631 seconds
+Jul 06 17:08:36 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:36 arthur capture[1173]: frame 93:
+Jul 06 17:08:36 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:36 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:36 arthur capture[1173]: read_frame took 0.008304 seconds
+Jul 06 17:08:37 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:37 arthur capture[1173]: frame 94:
+Jul 06 17:08:37 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:37 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:37 arthur capture[1173]: read_frame took 0.008353 seconds
+Jul 06 17:08:38 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:38 arthur capture[1173]: frame 95:
+Jul 06 17:08:38 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:38 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:38 arthur capture[1173]: read_frame took 0.008375 seconds
+Jul 06 17:08:39 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:39 arthur capture[1173]: frame 96:
+Jul 06 17:08:39 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:39 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:39 arthur capture[1173]: read_frame took 0.008415 seconds
+Jul 06 17:08:40 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:40 arthur capture[1173]: frame 97:
+Jul 06 17:08:40 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:40 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:40 arthur capture[1173]: read_frame took 0.008413 seconds
+Jul 06 17:08:41 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:41 arthur capture[1173]: frame 98:
+Jul 06 17:08:41 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:41 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:41 arthur capture[1173]: read_frame took 0.008392 seconds
+Jul 06 17:08:42 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:42 arthur capture[1173]: frame 99:
+Jul 06 17:08:42 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:42 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:42 arthur capture[1173]: read_frame took 0.007832 seconds
+Jul 06 17:08:43 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:43 arthur capture[1173]: frame 100:
+Jul 06 17:08:43 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:43 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:43 arthur capture[1173]: read_frame took 0.008579 seconds
+Jul 06 17:08:44 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:44 arthur capture[1173]: frame 101:
+Jul 06 17:08:44 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:44 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:44 arthur capture[1173]: read_frame took 0.007768 seconds
+Jul 06 17:08:45 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:45 arthur capture[1173]: frame 102:
+Jul 06 17:08:45 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:45 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:45 arthur capture[1173]: read_frame took 0.008650 seconds
+Jul 06 17:08:46 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:46 arthur capture[1173]: frame 103:
+Jul 06 17:08:46 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:46 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:46 arthur capture[1173]: read_frame took 0.007741 seconds
+Jul 06 17:08:47 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:47 arthur capture[1173]: frame 104:
+Jul 06 17:08:47 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:47 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:47 arthur capture[1173]: read_frame took 0.008521 seconds
+Jul 06 17:08:48 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:48 arthur capture[1173]: frame 105:
+Jul 06 17:08:48 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:48 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:48 arthur capture[1173]: read_frame took 0.007671 seconds
+Jul 06 17:08:49 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:49 arthur capture[1173]: frame 106:
+Jul 06 17:08:49 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:49 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:49 arthur capture[1173]: read_frame took 0.008701 seconds
+Jul 06 17:08:50 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:50 arthur capture[1173]: frame 107:
+Jul 06 17:08:50 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:50 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:50 arthur capture[1173]: read_frame took 0.008229 seconds
+Jul 06 17:08:51 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:51 arthur capture[1173]: frame 108:
+Jul 06 17:08:51 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:51 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:51 arthur capture[1173]: read_frame took 0.008372 seconds
+Jul 06 17:08:52 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:52 arthur capture[1173]: frame 109:
+Jul 06 17:08:52 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:52 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:52 arthur capture[1173]: read_frame took 0.007727 seconds
+Jul 06 17:08:53 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:53 arthur capture[1173]: frame 110:
+Jul 06 17:08:53 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:53 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:53 arthur capture[1173]: read_frame took 0.008446 seconds
+Jul 06 17:08:54 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:54 arthur capture[1173]: frame 111:
+Jul 06 17:08:54 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:54 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:54 arthur capture[1173]: read_frame took 0.008387 seconds
+Jul 06 17:08:55 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:55 arthur capture[1173]: frame 112:
+Jul 06 17:08:55 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:55 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:55 arthur capture[1173]: read_frame took 0.008411 seconds
+Jul 06 17:08:56 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:56 arthur capture[1173]: frame 113:
+Jul 06 17:08:56 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:56 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:56 arthur capture[1173]: read_frame took 0.008216 seconds
+Jul 06 17:08:57 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:57 arthur capture[1173]: frame 114:
+Jul 06 17:08:57 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:57 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:57 arthur capture[1173]: read_frame took 0.009749 seconds
+Jul 06 17:08:58 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:58 arthur capture[1173]: frame 115:
+Jul 06 17:08:58 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:58 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:58 arthur capture[1173]: read_frame took 0.008468 seconds
+Jul 06 17:08:59 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:08:59 arthur capture[1173]: frame 116:
+Jul 06 17:08:59 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:08:59 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:08:59 arthur capture[1173]: read_frame took 0.007799 seconds
+Jul 06 17:09:00 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:00 arthur capture[1173]: frame 117:
+Jul 06 17:09:00 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:00 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:00 arthur capture[1173]: read_frame took 0.008446 seconds
+Jul 06 17:09:01 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:01 arthur capture[1173]: frame 118:
+Jul 06 17:09:01 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:01 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:01 arthur capture[1173]: read_frame took 0.007924 seconds
+Jul 06 17:09:02 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:02 arthur capture[1173]: frame 119:
+Jul 06 17:09:02 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:02 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:02 arthur capture[1173]: read_frame took 0.008418 seconds
+Jul 06 17:09:03 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:03 arthur capture[1173]: frame 120:
+Jul 06 17:09:03 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:03 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:03 arthur capture[1173]: read_frame took 0.009741 seconds
+Jul 06 17:09:04 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:04 arthur capture[1173]: frame 121:
+Jul 06 17:09:04 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:04 arthur capture[1173]: read_frame took 0.008491 seconds
+Jul 06 17:09:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:05 arthur capture[1173]: frame 122:
+Jul 06 17:09:05 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:05 arthur capture[1173]: read_frame took 0.008379 seconds
+Jul 06 17:09:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:06 arthur capture[1173]: frame 123:
+Jul 06 17:09:06 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:06 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:06 arthur capture[1173]: read_frame took 0.009780 seconds
+Jul 06 17:09:07 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:07 arthur capture[1173]: frame 124:
+Jul 06 17:09:07 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:07 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:07 arthur capture[1173]: read_frame took 0.008126 seconds
+Jul 06 17:09:08 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:08 arthur capture[1173]: frame 125:
+Jul 06 17:09:08 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:08 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:08 arthur capture[1173]: read_frame took 0.008130 seconds
+Jul 06 17:09:09 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:09 arthur capture[1173]: frame 126:
+Jul 06 17:09:09 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:09 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:09 arthur capture[1173]: read_frame took 0.008395 seconds
+Jul 06 17:09:10 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:10 arthur capture[1173]: frame 127:
+Jul 06 17:09:10 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:10 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:10 arthur capture[1173]: read_frame took 0.008429 seconds
+Jul 06 17:09:11 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:11 arthur capture[1173]: frame 128:
+Jul 06 17:09:11 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:11 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:11 arthur capture[1173]: read_frame took 0.008352 seconds
+Jul 06 17:09:12 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:12 arthur capture[1173]: frame 129:
+Jul 06 17:09:12 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:12 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:12 arthur capture[1173]: read_frame took 0.008338 seconds
+Jul 06 17:09:13 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:13 arthur capture[1173]: frame 130:
+Jul 06 17:09:13 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:13 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:13 arthur capture[1173]: read_frame took 0.008182 seconds
+Jul 06 17:09:14 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:14 arthur capture[1173]: frame 131:
+Jul 06 17:09:14 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:14 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:14 arthur capture[1173]: read_frame took 0.008120 seconds
+Jul 06 17:09:15 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:15 arthur capture[1173]: frame 132:
+Jul 06 17:09:15 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:15 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:15 arthur capture[1173]: read_frame took 0.007791 seconds
+Jul 06 17:09:16 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:16 arthur capture[1173]: frame 133:
+Jul 06 17:09:16 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:16 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:16 arthur capture[1173]: read_frame took 0.008413 seconds
+Jul 06 17:09:17 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:17 arthur capture[1173]: frame 134:
+Jul 06 17:09:18 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:18 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:18 arthur capture[1173]: read_frame took 0.008467 seconds
+Jul 06 17:09:19 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:19 arthur capture[1173]: frame 135:
+Jul 06 17:09:19 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:19 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:19 arthur capture[1173]: read_frame took 0.008441 seconds
+Jul 06 17:09:20 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:20 arthur capture[1173]: frame 136:
+Jul 06 17:09:20 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:20 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:20 arthur capture[1173]: read_frame took 0.008421 seconds
+Jul 06 17:09:21 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:21 arthur capture[1173]: frame 137:
+Jul 06 17:09:21 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:21 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:21 arthur capture[1173]: read_frame took 0.008096 seconds
+Jul 06 17:09:22 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:22 arthur capture[1173]: frame 138:
+Jul 06 17:09:22 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:22 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:22 arthur capture[1173]: read_frame took 0.008400 seconds
+Jul 06 17:09:23 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:23 arthur capture[1173]: frame 139:
+Jul 06 17:09:23 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:23 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:23 arthur capture[1173]: read_frame took 0.009606 seconds
+Jul 06 17:09:24 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:24 arthur capture[1173]: frame 140:
+Jul 06 17:09:24 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:24 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:24 arthur capture[1173]: read_frame took 0.007806 seconds
+Jul 06 17:09:25 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:25 arthur capture[1173]: frame 141:
+Jul 06 17:09:25 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:25 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:25 arthur capture[1173]: read_frame took 0.008221 seconds
+Jul 06 17:09:26 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:26 arthur capture[1173]: frame 142:
+Jul 06 17:09:26 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:26 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:26 arthur capture[1173]: read_frame took 0.008398 seconds
+Jul 06 17:09:27 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:27 arthur capture[1173]: frame 143:
+Jul 06 17:09:27 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:27 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:27 arthur capture[1173]: read_frame took 0.008371 seconds
+Jul 06 17:09:28 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:28 arthur capture[1173]: frame 144:
+Jul 06 17:09:28 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:28 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:28 arthur capture[1173]: read_frame took 0.008404 seconds
+Jul 06 17:09:29 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:29 arthur capture[1173]: frame 145:
+Jul 06 17:09:29 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:29 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:29 arthur capture[1173]: read_frame took 0.008467 seconds
+Jul 06 17:09:30 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:30 arthur capture[1173]: frame 146:
+Jul 06 17:09:30 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:30 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:30 arthur capture[1173]: read_frame took 0.008327 seconds
+Jul 06 17:09:31 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:31 arthur capture[1173]: frame 147:
+Jul 06 17:09:31 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:31 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:31 arthur capture[1173]: read_frame took 0.008549 seconds
+Jul 06 17:09:32 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:32 arthur capture[1173]: frame 148:
+Jul 06 17:09:32 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:32 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:32 arthur capture[1173]: read_frame took 0.008432 seconds
+Jul 06 17:09:33 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:33 arthur capture[1173]: frame 149:
+Jul 06 17:09:33 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:33 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:33 arthur capture[1173]: read_frame took 0.008342 seconds
+Jul 06 17:09:34 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:34 arthur capture[1173]: frame 150:
+Jul 06 17:09:34 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:34 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:34 arthur capture[1173]: read_frame took 0.008324 seconds
+Jul 06 17:09:35 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:35 arthur capture[1173]: frame 151:
+Jul 06 17:09:35 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:35 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:35 arthur capture[1173]: read_frame took 0.008275 seconds
+Jul 06 17:09:36 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:36 arthur capture[1173]: frame 152:
+Jul 06 17:09:36 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:36 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:36 arthur capture[1173]: read_frame took 0.008355 seconds
+Jul 06 17:09:37 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:37 arthur capture[1173]: frame 153:
+Jul 06 17:09:37 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:37 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:37 arthur capture[1173]: read_frame took 0.007808 seconds
+Jul 06 17:09:38 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:38 arthur capture[1173]: frame 154:
+Jul 06 17:09:38 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:38 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:38 arthur capture[1173]: read_frame took 0.008602 seconds
+Jul 06 17:09:39 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:39 arthur capture[1173]: frame 155:
+Jul 06 17:09:39 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:39 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:39 arthur capture[1173]: read_frame took 0.008377 seconds
+Jul 06 17:09:40 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:40 arthur capture[1173]: frame 156:
+Jul 06 17:09:40 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:40 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:40 arthur capture[1173]: read_frame took 0.008311 seconds
+Jul 06 17:09:41 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:41 arthur capture[1173]: frame 157:
+Jul 06 17:09:41 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:41 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:41 arthur capture[1173]: read_frame took 0.008329 seconds
+Jul 06 17:09:42 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:42 arthur capture[1173]: frame 158:
+Jul 06 17:09:42 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:42 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:42 arthur capture[1173]: read_frame took 0.008474 seconds
+Jul 06 17:09:43 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:43 arthur capture[1173]: frame 159:
+Jul 06 17:09:43 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:43 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:43 arthur capture[1173]: read_frame took 0.008464 seconds
+Jul 06 17:09:44 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:44 arthur capture[1173]: frame 160:
+Jul 06 17:09:44 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:44 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:44 arthur capture[1173]: read_frame took 0.007766 seconds
+Jul 06 17:09:45 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:45 arthur capture[1173]: frame 161:
+Jul 06 17:09:45 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:45 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:45 arthur capture[1173]: read_frame took 0.008473 seconds
+Jul 06 17:09:46 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:46 arthur capture[1173]: frame 162:
+Jul 06 17:09:46 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:46 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:46 arthur capture[1173]: read_frame took 0.008358 seconds
+Jul 06 17:09:47 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:47 arthur capture[1173]: frame 163:
+Jul 06 17:09:47 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:47 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:47 arthur capture[1173]: read_frame took 0.008372 seconds
+Jul 06 17:09:48 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:48 arthur capture[1173]: frame 164:
+Jul 06 17:09:48 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:48 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:48 arthur capture[1173]: read_frame took 0.008404 seconds
+Jul 06 17:09:49 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:49 arthur capture[1173]: frame 165:
+Jul 06 17:09:49 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:49 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:49 arthur capture[1173]: read_frame took 0.008488 seconds
+Jul 06 17:09:50 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:50 arthur capture[1173]: frame 166:
+Jul 06 17:09:50 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:50 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:50 arthur capture[1173]: read_frame took 0.008269 seconds
+Jul 06 17:09:51 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:51 arthur capture[1173]: frame 167:
+Jul 06 17:09:51 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:51 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:51 arthur capture[1173]: read_frame took 0.008398 seconds
+Jul 06 17:09:52 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:52 arthur capture[1173]: frame 168:
+Jul 06 17:09:52 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:52 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:52 arthur capture[1173]: read_frame took 0.008342 seconds
+Jul 06 17:09:53 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:53 arthur capture[1173]: frame 169:
+Jul 06 17:09:53 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:53 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:53 arthur capture[1173]: read_frame took 0.008446 seconds
+Jul 06 17:09:54 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:54 arthur capture[1173]: frame 170:
+Jul 06 17:09:54 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:54 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:54 arthur capture[1173]: read_frame took 0.008406 seconds
+Jul 06 17:09:55 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:55 arthur capture[1173]: frame 171:
+Jul 06 17:09:55 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:55 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:55 arthur capture[1173]: read_frame took 0.008187 seconds
+Jul 06 17:09:56 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:56 arthur capture[1173]: frame 172:
+Jul 06 17:09:56 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:56 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:56 arthur capture[1173]: read_frame took 0.008485 seconds
+Jul 06 17:09:57 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:57 arthur capture[1173]: frame 173:
+Jul 06 17:09:57 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:57 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:57 arthur capture[1173]: read_frame took 0.008378 seconds
+Jul 06 17:09:58 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:58 arthur capture[1173]: frame 174:
+Jul 06 17:09:58 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:58 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:58 arthur capture[1173]: read_frame took 0.007768 seconds
+Jul 06 17:09:59 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:09:59 arthur capture[1173]: frame 175:
+Jul 06 17:09:59 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:09:59 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:09:59 arthur capture[1173]: read_frame took 0.008623 seconds
+Jul 06 17:10:00 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:00 arthur capture[1173]: frame 176:
+Jul 06 17:10:00 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:00 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:00 arthur capture[1173]: read_frame took 0.008492 seconds
+Jul 06 17:10:01 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:01 arthur capture[1173]: frame 177:
+Jul 06 17:10:01 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:01 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:01 arthur capture[1173]: read_frame took 0.008453 seconds
+Jul 06 17:10:02 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:02 arthur capture[1173]: frame 178:
+Jul 06 17:10:02 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:02 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:02 arthur capture[1173]: read_frame took 0.008423 seconds
+Jul 06 17:10:03 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:03 arthur capture[1173]: frame 179:
+Jul 06 17:10:03 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:03 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:03 arthur capture[1173]: read_frame took 0.008415 seconds
+Jul 06 17:10:04 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:04 arthur capture[1173]: frame 180:
+Jul 06 17:10:04 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:04 arthur capture[1173]: read_frame took 0.008302 seconds
+Jul 06 17:10:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:05 arthur capture[1173]: frame 181:
+Jul 06 17:10:05 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:05 arthur capture[1173]: read_frame took 0.009756 seconds
+Jul 06 17:10:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:06 arthur capture[1173]: 
+Jul 06 17:10:06 arthur sudo[1171]: pam_unix(sudo:session): session closed for user root

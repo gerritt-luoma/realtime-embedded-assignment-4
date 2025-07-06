@@ -1,0 +1,953 @@
+Jul 06 17:10:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:04 arthur capture[1173]: read_frame took 0.008302 seconds
+Jul 06 17:10:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:05 arthur capture[1173]: frame 181:
+Jul 06 17:10:05 arthur capture[1173]: wrote 307200 bytes
+Jul 06 17:10:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
+Jul 06 17:10:05 arthur capture[1173]: read_frame took 0.009756 seconds
+Jul 06 17:10:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:10:06 arthur capture[1173]: 
+Jul 06 17:10:06 arthur sudo[1171]: pam_unix(sudo:session): session closed for user root
+Jul 06 17:11:38 arthur sudo[1207]:  gerritt : TTY=pts/0 ; PWD=/home/gerritt/repos/realtime-embedded-assignment-4/problem-3/simple-capture-1800 ; USER=root ; COMMAND=./capture
+Jul 06 17:11:38 arthur sudo[1207]: pam_unix(sudo:session): session opened for user root(uid=0) by gerritt(uid=1000)
+Jul 06 17:11:38 arthur kernel: usb 1-1.1: reset high-speed USB device number 3 using xhci_hcd
+Jul 06 17:11:39 arthur capture[1209]: FORCING FORMAT
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 0
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 1
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 2
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 3
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 4
+Jul 06 17:11:39 arthur capture[1209]: allocated buffer 5
+Jul 06 17:11:39 arthur capture[1209]: frame -7:
+Jul 06 17:11:39 arthur capture[1209]: read_frame took 0.032321 seconds
+Jul 06 17:11:40 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:40 arthur capture[1209]: frame -6:
+Jul 06 17:11:40 arthur capture[1209]: read_frame took 0.029998 seconds
+Jul 06 17:11:41 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:41 arthur capture[1209]: frame -5:
+Jul 06 17:11:41 arthur capture[1209]: read_frame took 0.029999 seconds
+Jul 06 17:11:42 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:42 arthur capture[1209]: frame -4:
+Jul 06 17:11:42 arthur capture[1209]: read_frame took 0.029998 seconds
+Jul 06 17:11:43 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:43 arthur capture[1209]: frame -3:
+Jul 06 17:11:43 arthur capture[1209]: read_frame took 0.030085 seconds
+Jul 06 17:11:44 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:44 arthur capture[1209]: frame -2:
+Jul 06 17:11:44 arthur capture[1209]: read_frame took 0.030003 seconds
+Jul 06 17:11:45 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:45 arthur capture[1209]: frame -1:
+Jul 06 17:11:45 arthur capture[1209]: read_frame took 0.030115 seconds
+Jul 06 17:11:46 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:46 arthur capture[1209]: frame 0:
+Jul 06 17:11:46 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:46 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:46 arthur capture[1209]: read_frame took 0.034702 seconds
+Jul 06 17:11:47 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:47 arthur capture[1209]: frame 1:
+Jul 06 17:11:47 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:47 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:47 arthur capture[1209]: read_frame took 0.034610 seconds
+Jul 06 17:11:48 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:48 arthur capture[1209]: frame 2:
+Jul 06 17:11:48 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:48 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:48 arthur capture[1209]: read_frame took 0.034715 seconds
+Jul 06 17:11:49 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:49 arthur capture[1209]: frame 3:
+Jul 06 17:11:49 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:49 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:49 arthur capture[1209]: read_frame took 0.032100 seconds
+Jul 06 17:11:50 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:50 arthur capture[1209]: frame 4:
+Jul 06 17:11:50 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:50 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:50 arthur capture[1209]: read_frame took 0.034647 seconds
+Jul 06 17:11:51 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:51 arthur capture[1209]: frame 5:
+Jul 06 17:11:51 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:51 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:51 arthur capture[1209]: read_frame took 0.035894 seconds
+Jul 06 17:11:52 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:52 arthur capture[1209]: frame 6:
+Jul 06 17:11:52 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:52 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:52 arthur capture[1209]: read_frame took 0.033908 seconds
+Jul 06 17:11:53 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:53 arthur capture[1209]: frame 7:
+Jul 06 17:11:53 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:53 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:53 arthur capture[1209]: read_frame took 0.033693 seconds
+Jul 06 17:11:54 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:54 arthur capture[1209]: frame 8:
+Jul 06 17:11:54 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:54 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:54 arthur capture[1209]: read_frame took 0.031543 seconds
+Jul 06 17:11:55 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:55 arthur capture[1209]: frame 9:
+Jul 06 17:11:55 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:55 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:55 arthur capture[1209]: read_frame took 0.036142 seconds
+Jul 06 17:11:56 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:56 arthur capture[1209]: frame 10:
+Jul 06 17:11:56 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:56 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:56 arthur capture[1209]: read_frame took 0.033071 seconds
+Jul 06 17:11:57 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:57 arthur capture[1209]: frame 11:
+Jul 06 17:11:57 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:57 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:57 arthur capture[1209]: read_frame took 0.033895 seconds
+Jul 06 17:11:58 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:11:58 arthur capture[1209]: frame 12:
+Jul 06 17:11:59 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:11:59 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:11:59 arthur capture[1209]: read_frame took 0.034457 seconds
+Jul 06 17:12:00 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:00 arthur capture[1209]: frame 13:
+Jul 06 17:12:00 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:00 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:00 arthur capture[1209]: read_frame took 0.033961 seconds
+Jul 06 17:12:01 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:01 arthur capture[1209]: frame 14:
+Jul 06 17:12:01 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:01 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:01 arthur capture[1209]: read_frame took 0.033980 seconds
+Jul 06 17:12:02 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:02 arthur capture[1209]: frame 15:
+Jul 06 17:12:02 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:02 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:02 arthur capture[1209]: read_frame took 0.034042 seconds
+Jul 06 17:12:03 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:03 arthur capture[1209]: frame 16:
+Jul 06 17:12:03 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:03 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:03 arthur capture[1209]: read_frame took 0.033315 seconds
+Jul 06 17:12:04 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:04 arthur capture[1209]: frame 17:
+Jul 06 17:12:04 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:04 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:04 arthur capture[1209]: read_frame took 0.032539 seconds
+Jul 06 17:12:05 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:05 arthur capture[1209]: frame 18:
+Jul 06 17:12:05 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:05 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:05 arthur capture[1209]: read_frame took 0.033350 seconds
+Jul 06 17:12:06 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:06 arthur capture[1209]: frame 19:
+Jul 06 17:12:06 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:06 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:06 arthur capture[1209]: read_frame took 0.033872 seconds
+Jul 06 17:12:07 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:07 arthur capture[1209]: frame 20:
+Jul 06 17:12:07 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:07 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:07 arthur capture[1209]: read_frame took 0.036182 seconds
+Jul 06 17:12:08 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:08 arthur capture[1209]: frame 21:
+Jul 06 17:12:08 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:08 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:08 arthur capture[1209]: read_frame took 0.033767 seconds
+Jul 06 17:12:09 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:09 arthur capture[1209]: frame 22:
+Jul 06 17:12:09 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:09 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:09 arthur capture[1209]: read_frame took 0.033847 seconds
+Jul 06 17:12:10 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:10 arthur capture[1209]: frame 23:
+Jul 06 17:12:10 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:10 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:10 arthur capture[1209]: read_frame took 0.034671 seconds
+Jul 06 17:12:11 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:11 arthur capture[1209]: frame 24:
+Jul 06 17:12:11 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:11 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:11 arthur capture[1209]: read_frame took 0.034653 seconds
+Jul 06 17:12:12 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:12 arthur capture[1209]: frame 25:
+Jul 06 17:12:12 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:12 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:12 arthur capture[1209]: read_frame took 0.034519 seconds
+Jul 06 17:12:13 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:13 arthur capture[1209]: frame 26:
+Jul 06 17:12:13 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:13 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:13 arthur capture[1209]: read_frame took 0.034574 seconds
+Jul 06 17:12:14 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:14 arthur capture[1209]: frame 27:
+Jul 06 17:12:14 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:14 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:14 arthur capture[1209]: read_frame took 0.034055 seconds
+Jul 06 17:12:15 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:15 arthur capture[1209]: frame 28:
+Jul 06 17:12:15 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:15 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:15 arthur capture[1209]: read_frame took 0.034651 seconds
+Jul 06 17:12:16 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:16 arthur capture[1209]: frame 29:
+Jul 06 17:12:16 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:16 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:16 arthur capture[1209]: read_frame took 0.034705 seconds
+Jul 06 17:12:17 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:17 arthur capture[1209]: frame 30:
+Jul 06 17:12:17 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:17 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:17 arthur capture[1209]: read_frame took 0.034466 seconds
+Jul 06 17:12:18 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:18 arthur capture[1209]: frame 31:
+Jul 06 17:12:18 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:18 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:18 arthur capture[1209]: read_frame took 0.034522 seconds
+Jul 06 17:12:19 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:19 arthur capture[1209]: frame 32:
+Jul 06 17:12:19 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:19 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:19 arthur capture[1209]: read_frame took 0.031411 seconds
+Jul 06 17:12:20 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:20 arthur capture[1209]: frame 33:
+Jul 06 17:12:20 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:20 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:20 arthur capture[1209]: read_frame took 0.034055 seconds
+Jul 06 17:12:21 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:21 arthur capture[1209]: frame 34:
+Jul 06 17:12:21 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:21 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:21 arthur capture[1209]: read_frame took 0.034304 seconds
+Jul 06 17:12:22 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:22 arthur capture[1209]: frame 35:
+Jul 06 17:12:22 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:22 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:22 arthur capture[1209]: read_frame took 0.033955 seconds
+Jul 06 17:12:23 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:23 arthur capture[1209]: frame 36:
+Jul 06 17:12:23 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:23 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:23 arthur capture[1209]: read_frame took 0.035957 seconds
+Jul 06 17:12:24 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:24 arthur capture[1209]: frame 37:
+Jul 06 17:12:24 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:24 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:24 arthur capture[1209]: read_frame took 0.034693 seconds
+Jul 06 17:12:25 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:25 arthur capture[1209]: frame 38:
+Jul 06 17:12:25 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:25 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:25 arthur capture[1209]: read_frame took 0.034382 seconds
+Jul 06 17:12:26 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:26 arthur capture[1209]: frame 39:
+Jul 06 17:12:26 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:26 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:26 arthur capture[1209]: read_frame took 0.034718 seconds
+Jul 06 17:12:27 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:27 arthur capture[1209]: frame 40:
+Jul 06 17:12:27 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:27 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:27 arthur capture[1209]: read_frame took 0.034648 seconds
+Jul 06 17:12:28 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:28 arthur capture[1209]: frame 41:
+Jul 06 17:12:29 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:29 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:29 arthur capture[1209]: read_frame took 0.031702 seconds
+Jul 06 17:12:30 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:30 arthur capture[1209]: frame 42:
+Jul 06 17:12:30 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:30 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:30 arthur capture[1209]: read_frame took 0.033402 seconds
+Jul 06 17:12:31 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:31 arthur capture[1209]: frame 43:
+Jul 06 17:12:31 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:31 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:31 arthur capture[1209]: read_frame took 0.029290 seconds
+Jul 06 17:12:32 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:32 arthur capture[1209]: frame 44:
+Jul 06 17:12:32 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:32 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:32 arthur capture[1209]: read_frame took 0.034515 seconds
+Jul 06 17:12:33 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:33 arthur capture[1209]: frame 45:
+Jul 06 17:12:33 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:33 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:33 arthur capture[1209]: read_frame took 0.034511 seconds
+Jul 06 17:12:34 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:34 arthur capture[1209]: frame 46:
+Jul 06 17:12:34 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:34 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:34 arthur capture[1209]: read_frame took 0.034608 seconds
+Jul 06 17:12:35 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:35 arthur capture[1209]: frame 47:
+Jul 06 17:12:35 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:35 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:35 arthur capture[1209]: read_frame took 0.033875 seconds
+Jul 06 17:12:36 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:36 arthur capture[1209]: frame 48:
+Jul 06 17:12:36 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:36 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:36 arthur capture[1209]: read_frame took 0.033911 seconds
+Jul 06 17:12:37 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:37 arthur capture[1209]: frame 49:
+Jul 06 17:12:37 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:37 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:37 arthur capture[1209]: read_frame took 0.033840 seconds
+Jul 06 17:12:38 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:38 arthur capture[1209]: frame 50:
+Jul 06 17:12:38 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:38 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:38 arthur capture[1209]: read_frame took 0.033794 seconds
+Jul 06 17:12:39 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:39 arthur capture[1209]: frame 51:
+Jul 06 17:12:39 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:39 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:39 arthur capture[1209]: read_frame took 0.034679 seconds
+Jul 06 17:12:40 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:40 arthur capture[1209]: frame 52:
+Jul 06 17:12:40 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:40 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:40 arthur capture[1209]: read_frame took 0.034526 seconds
+Jul 06 17:12:41 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:41 arthur capture[1209]: frame 53:
+Jul 06 17:12:41 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:41 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:41 arthur capture[1209]: read_frame took 0.034159 seconds
+Jul 06 17:12:42 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:42 arthur capture[1209]: frame 54:
+Jul 06 17:12:42 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:42 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:42 arthur capture[1209]: read_frame took 0.034814 seconds
+Jul 06 17:12:43 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:43 arthur capture[1209]: frame 55:
+Jul 06 17:12:43 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:43 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:43 arthur capture[1209]: read_frame took 0.032579 seconds
+Jul 06 17:12:44 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:44 arthur capture[1209]: frame 56:
+Jul 06 17:12:44 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:44 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:44 arthur capture[1209]: read_frame took 0.033485 seconds
+Jul 06 17:12:45 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:45 arthur capture[1209]: frame 57:
+Jul 06 17:12:45 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:45 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:45 arthur capture[1209]: read_frame took 0.031582 seconds
+Jul 06 17:12:46 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:46 arthur capture[1209]: frame 58:
+Jul 06 17:12:46 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:46 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:46 arthur capture[1209]: read_frame took 0.034545 seconds
+Jul 06 17:12:47 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:47 arthur capture[1209]: frame 59:
+Jul 06 17:12:47 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:47 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:47 arthur capture[1209]: read_frame took 0.035060 seconds
+Jul 06 17:12:48 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:48 arthur capture[1209]: frame 60:
+Jul 06 17:12:48 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:48 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:48 arthur capture[1209]: read_frame took 0.034086 seconds
+Jul 06 17:12:49 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:49 arthur capture[1209]: frame 61:
+Jul 06 17:12:49 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:49 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:49 arthur capture[1209]: read_frame took 0.035028 seconds
+Jul 06 17:12:50 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:50 arthur capture[1209]: frame 62:
+Jul 06 17:12:50 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:50 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:50 arthur capture[1209]: read_frame took 0.033974 seconds
+Jul 06 17:12:51 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:51 arthur capture[1209]: frame 63:
+Jul 06 17:12:51 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:51 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:51 arthur capture[1209]: read_frame took 0.033866 seconds
+Jul 06 17:12:52 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:52 arthur capture[1209]: frame 64:
+Jul 06 17:12:52 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:52 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:52 arthur capture[1209]: read_frame took 0.033867 seconds
+Jul 06 17:12:53 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:53 arthur capture[1209]: frame 65:
+Jul 06 17:12:53 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:53 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:53 arthur capture[1209]: read_frame took 0.034124 seconds
+Jul 06 17:12:54 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:54 arthur capture[1209]: frame 66:
+Jul 06 17:12:54 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:54 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:54 arthur capture[1209]: read_frame took 0.030583 seconds
+Jul 06 17:12:55 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:55 arthur capture[1209]: frame 67:
+Jul 06 17:12:55 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:55 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:55 arthur capture[1209]: read_frame took 0.031447 seconds
+Jul 06 17:12:56 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:56 arthur capture[1209]: frame 68:
+Jul 06 17:12:56 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:56 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:56 arthur capture[1209]: read_frame took 0.034642 seconds
+Jul 06 17:12:57 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:57 arthur capture[1209]: frame 69:
+Jul 06 17:12:57 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:57 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:57 arthur capture[1209]: read_frame took 0.034979 seconds
+Jul 06 17:12:58 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:58 arthur capture[1209]: frame 70:
+Jul 06 17:12:58 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:12:58 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:12:58 arthur capture[1209]: read_frame took 0.034032 seconds
+Jul 06 17:12:59 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:12:59 arthur capture[1209]: frame 71:
+Jul 06 17:13:00 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:00 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:00 arthur capture[1209]: read_frame took 0.034606 seconds
+Jul 06 17:13:01 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:01 arthur capture[1209]: frame 72:
+Jul 06 17:13:01 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:01 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:01 arthur capture[1209]: read_frame took 0.034638 seconds
+Jul 06 17:13:02 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:02 arthur capture[1209]: frame 73:
+Jul 06 17:13:02 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:02 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:02 arthur capture[1209]: read_frame took 0.030856 seconds
+Jul 06 17:13:03 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:03 arthur capture[1209]: frame 74:
+Jul 06 17:13:03 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:03 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:03 arthur capture[1209]: read_frame took 0.034133 seconds
+Jul 06 17:13:04 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:04 arthur capture[1209]: frame 75:
+Jul 06 17:13:04 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:04 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:04 arthur capture[1209]: read_frame took 0.033822 seconds
+Jul 06 17:13:05 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:05 arthur capture[1209]: frame 76:
+Jul 06 17:13:05 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:05 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:05 arthur capture[1209]: read_frame took 0.033928 seconds
+Jul 06 17:13:06 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:06 arthur capture[1209]: frame 77:
+Jul 06 17:13:06 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:06 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:06 arthur capture[1209]: read_frame took 0.033835 seconds
+Jul 06 17:13:07 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:07 arthur capture[1209]: frame 78:
+Jul 06 17:13:07 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:07 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:07 arthur capture[1209]: read_frame took 0.036038 seconds
+Jul 06 17:13:08 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:08 arthur capture[1209]: frame 79:
+Jul 06 17:13:08 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:08 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:08 arthur capture[1209]: read_frame took 0.033920 seconds
+Jul 06 17:13:09 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:09 arthur capture[1209]: frame 80:
+Jul 06 17:13:09 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:09 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:09 arthur capture[1209]: read_frame took 0.034073 seconds
+Jul 06 17:13:10 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:10 arthur capture[1209]: frame 81:
+Jul 06 17:13:10 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:10 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:10 arthur capture[1209]: read_frame took 0.033883 seconds
+Jul 06 17:13:11 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:11 arthur capture[1209]: frame 82:
+Jul 06 17:13:11 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:11 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:11 arthur capture[1209]: read_frame took 0.034258 seconds
+Jul 06 17:13:12 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:12 arthur capture[1209]: frame 83:
+Jul 06 17:13:12 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:12 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:12 arthur capture[1209]: read_frame took 0.034022 seconds
+Jul 06 17:13:13 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:13 arthur capture[1209]: frame 84:
+Jul 06 17:13:13 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:13 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:13 arthur capture[1209]: read_frame took 0.034048 seconds
+Jul 06 17:13:14 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:14 arthur capture[1209]: frame 85:
+Jul 06 17:13:14 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:14 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:14 arthur capture[1209]: read_frame took 0.032645 seconds
+Jul 06 17:13:15 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:15 arthur capture[1209]: frame 86:
+Jul 06 17:13:15 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:15 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:15 arthur capture[1209]: read_frame took 0.034013 seconds
+Jul 06 17:13:16 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:16 arthur capture[1209]: frame 87:
+Jul 06 17:13:16 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:16 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:16 arthur capture[1209]: read_frame took 0.033901 seconds
+Jul 06 17:13:17 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:17 arthur capture[1209]: frame 88:
+Jul 06 17:13:17 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:17 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:17 arthur capture[1209]: read_frame took 0.033983 seconds
+Jul 06 17:13:18 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:18 arthur capture[1209]: frame 89:
+Jul 06 17:13:18 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:18 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:18 arthur capture[1209]: read_frame took 0.033853 seconds
+Jul 06 17:13:19 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:19 arthur capture[1209]: frame 90:
+Jul 06 17:13:19 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:19 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:19 arthur capture[1209]: read_frame took 0.032577 seconds
+Jul 06 17:13:20 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:20 arthur capture[1209]: frame 91:
+Jul 06 17:13:20 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:20 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:20 arthur capture[1209]: read_frame took 0.033922 seconds
+Jul 06 17:13:21 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:21 arthur capture[1209]: frame 92:
+Jul 06 17:13:21 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:21 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:21 arthur capture[1209]: read_frame took 0.034075 seconds
+Jul 06 17:13:22 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:22 arthur capture[1209]: frame 93:
+Jul 06 17:13:22 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:22 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:22 arthur capture[1209]: read_frame took 0.034339 seconds
+Jul 06 17:13:23 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:23 arthur capture[1209]: frame 94:
+Jul 06 17:13:23 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:23 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:23 arthur capture[1209]: read_frame took 0.036074 seconds
+Jul 06 17:13:24 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:24 arthur capture[1209]: frame 95:
+Jul 06 17:13:24 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:24 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:24 arthur capture[1209]: read_frame took 0.035005 seconds
+Jul 06 17:13:25 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:25 arthur capture[1209]: frame 96:
+Jul 06 17:13:25 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:25 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:25 arthur capture[1209]: read_frame took 0.035402 seconds
+Jul 06 17:13:26 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:26 arthur capture[1209]: frame 97:
+Jul 06 17:13:26 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:26 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:26 arthur capture[1209]: read_frame took 0.036320 seconds
+Jul 06 17:13:27 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:27 arthur capture[1209]: frame 98:
+Jul 06 17:13:27 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:27 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:27 arthur capture[1209]: read_frame took 0.036293 seconds
+Jul 06 17:13:28 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:28 arthur capture[1209]: frame 99:
+Jul 06 17:13:28 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:28 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:28 arthur capture[1209]: read_frame took 0.036317 seconds
+Jul 06 17:13:29 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:29 arthur capture[1209]: frame 100:
+Jul 06 17:13:30 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:30 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:30 arthur capture[1209]: read_frame took 0.036139 seconds
+Jul 06 17:13:31 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:31 arthur capture[1209]: frame 101:
+Jul 06 17:13:31 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:31 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:31 arthur capture[1209]: read_frame took 0.036057 seconds
+Jul 06 17:13:32 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:32 arthur capture[1209]: frame 102:
+Jul 06 17:13:32 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:32 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:32 arthur capture[1209]: read_frame took 0.035967 seconds
+Jul 06 17:13:33 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:33 arthur capture[1209]: frame 103:
+Jul 06 17:13:33 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:33 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:33 arthur capture[1209]: read_frame took 0.033998 seconds
+Jul 06 17:13:34 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:34 arthur capture[1209]: frame 104:
+Jul 06 17:13:34 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:34 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:34 arthur capture[1209]: read_frame took 0.033920 seconds
+Jul 06 17:13:35 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:35 arthur capture[1209]: frame 105:
+Jul 06 17:13:35 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:35 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:35 arthur capture[1209]: read_frame took 0.033947 seconds
+Jul 06 17:13:36 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:36 arthur capture[1209]: frame 106:
+Jul 06 17:13:36 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:36 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:36 arthur capture[1209]: read_frame took 0.033984 seconds
+Jul 06 17:13:37 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:37 arthur capture[1209]: frame 107:
+Jul 06 17:13:37 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:37 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:37 arthur capture[1209]: read_frame took 0.034072 seconds
+Jul 06 17:13:38 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:38 arthur capture[1209]: frame 108:
+Jul 06 17:13:38 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:38 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:38 arthur capture[1209]: read_frame took 0.030863 seconds
+Jul 06 17:13:39 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:39 arthur capture[1209]: frame 109:
+Jul 06 17:13:39 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:39 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:39 arthur capture[1209]: read_frame took 0.033956 seconds
+Jul 06 17:13:40 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:40 arthur capture[1209]: frame 110:
+Jul 06 17:13:40 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:40 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:40 arthur capture[1209]: read_frame took 0.034033 seconds
+Jul 06 17:13:41 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:41 arthur capture[1209]: frame 111:
+Jul 06 17:13:41 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:41 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:41 arthur capture[1209]: read_frame took 0.030746 seconds
+Jul 06 17:13:42 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:42 arthur capture[1209]: frame 112:
+Jul 06 17:13:42 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:42 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:42 arthur capture[1209]: read_frame took 0.034164 seconds
+Jul 06 17:13:43 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:43 arthur capture[1209]: frame 113:
+Jul 06 17:13:43 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:43 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:43 arthur capture[1209]: read_frame took 0.029439 seconds
+Jul 06 17:13:44 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:44 arthur capture[1209]: frame 114:
+Jul 06 17:13:44 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:44 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:44 arthur capture[1209]: read_frame took 0.030214 seconds
+Jul 06 17:13:45 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:45 arthur capture[1209]: frame 115:
+Jul 06 17:13:45 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:45 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:45 arthur capture[1209]: read_frame took 0.033547 seconds
+Jul 06 17:13:46 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:46 arthur capture[1209]: frame 116:
+Jul 06 17:13:46 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:46 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:46 arthur capture[1209]: read_frame took 0.031751 seconds
+Jul 06 17:13:47 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:47 arthur capture[1209]: frame 117:
+Jul 06 17:13:47 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:47 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:47 arthur capture[1209]: read_frame took 0.033231 seconds
+Jul 06 17:13:48 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:48 arthur capture[1209]: frame 118:
+Jul 06 17:13:48 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:48 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:48 arthur capture[1209]: read_frame took 0.034729 seconds
+Jul 06 17:13:49 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:49 arthur capture[1209]: frame 119:
+Jul 06 17:13:49 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:49 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:49 arthur capture[1209]: read_frame took 0.034622 seconds
+Jul 06 17:13:50 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:50 arthur capture[1209]: frame 120:
+Jul 06 17:13:50 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:50 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:50 arthur capture[1209]: read_frame took 0.034799 seconds
+Jul 06 17:13:51 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:51 arthur capture[1209]: frame 121:
+Jul 06 17:13:51 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:51 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:51 arthur capture[1209]: read_frame took 0.033935 seconds
+Jul 06 17:13:52 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:52 arthur capture[1209]: frame 122:
+Jul 06 17:13:52 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:52 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:52 arthur capture[1209]: read_frame took 0.034050 seconds
+Jul 06 17:13:53 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:53 arthur capture[1209]: frame 123:
+Jul 06 17:13:53 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:53 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:53 arthur capture[1209]: read_frame took 0.033495 seconds
+Jul 06 17:13:54 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:54 arthur capture[1209]: frame 124:
+Jul 06 17:13:54 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:54 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:54 arthur capture[1209]: read_frame took 0.034107 seconds
+Jul 06 17:13:55 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:55 arthur capture[1209]: frame 125:
+Jul 06 17:13:55 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:55 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:55 arthur capture[1209]: read_frame took 0.033859 seconds
+Jul 06 17:13:56 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:56 arthur capture[1209]: frame 126:
+Jul 06 17:13:56 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:56 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:56 arthur capture[1209]: read_frame took 0.033967 seconds
+Jul 06 17:13:57 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:57 arthur capture[1209]: frame 127:
+Jul 06 17:13:57 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:57 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:57 arthur capture[1209]: read_frame took 0.033837 seconds
+Jul 06 17:13:58 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:58 arthur capture[1209]: frame 128:
+Jul 06 17:13:58 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:13:58 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:13:58 arthur capture[1209]: read_frame took 0.033980 seconds
+Jul 06 17:13:59 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:13:59 arthur capture[1209]: frame 129:
+Jul 06 17:14:00 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:00 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:00 arthur capture[1209]: read_frame took 0.034269 seconds
+Jul 06 17:14:01 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:01 arthur capture[1209]: frame 130:
+Jul 06 17:14:01 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:01 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:01 arthur capture[1209]: read_frame took 0.033861 seconds
+Jul 06 17:14:02 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:02 arthur capture[1209]: frame 131:
+Jul 06 17:14:02 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:02 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:02 arthur capture[1209]: read_frame took 0.034283 seconds
+Jul 06 17:14:03 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:03 arthur capture[1209]: frame 132:
+Jul 06 17:14:03 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:03 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:03 arthur capture[1209]: read_frame took 0.034899 seconds
+Jul 06 17:14:04 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:04 arthur capture[1209]: frame 133:
+Jul 06 17:14:04 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:04 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:04 arthur capture[1209]: read_frame took 0.033954 seconds
+Jul 06 17:14:05 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:05 arthur capture[1209]: frame 134:
+Jul 06 17:14:05 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:05 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:05 arthur capture[1209]: read_frame took 0.034075 seconds
+Jul 06 17:14:06 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:06 arthur capture[1209]: frame 135:
+Jul 06 17:14:06 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:06 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:06 arthur capture[1209]: read_frame took 0.033993 seconds
+Jul 06 17:14:07 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:07 arthur capture[1209]: frame 136:
+Jul 06 17:14:07 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:07 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:07 arthur capture[1209]: read_frame took 0.034670 seconds
+Jul 06 17:14:08 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:08 arthur capture[1209]: frame 137:
+Jul 06 17:14:08 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:08 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:08 arthur capture[1209]: read_frame took 0.034537 seconds
+Jul 06 17:14:09 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:09 arthur capture[1209]: frame 138:
+Jul 06 17:14:09 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:09 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:09 arthur capture[1209]: read_frame took 0.034630 seconds
+Jul 06 17:14:10 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:10 arthur capture[1209]: frame 139:
+Jul 06 17:14:10 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:10 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:10 arthur capture[1209]: read_frame took 0.034093 seconds
+Jul 06 17:14:11 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:11 arthur capture[1209]: frame 140:
+Jul 06 17:14:11 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:11 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:11 arthur capture[1209]: read_frame took 0.033330 seconds
+Jul 06 17:14:12 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:12 arthur capture[1209]: frame 141:
+Jul 06 17:14:12 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:12 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:12 arthur capture[1209]: read_frame took 0.034929 seconds
+Jul 06 17:14:13 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:13 arthur capture[1209]: frame 142:
+Jul 06 17:14:13 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:13 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:13 arthur capture[1209]: read_frame took 0.033844 seconds
+Jul 06 17:14:14 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:14 arthur capture[1209]: frame 143:
+Jul 06 17:14:14 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:14 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:14 arthur capture[1209]: read_frame took 0.032905 seconds
+Jul 06 17:14:15 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:15 arthur capture[1209]: frame 144:
+Jul 06 17:14:15 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:15 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:15 arthur capture[1209]: read_frame took 0.033705 seconds
+Jul 06 17:14:16 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:16 arthur capture[1209]: frame 145:
+Jul 06 17:14:16 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:16 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:16 arthur capture[1209]: read_frame took 0.033992 seconds
+Jul 06 17:14:17 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:17 arthur capture[1209]: frame 146:
+Jul 06 17:14:17 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:17 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:17 arthur capture[1209]: read_frame took 0.033876 seconds
+Jul 06 17:14:18 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:18 arthur capture[1209]: frame 147:
+Jul 06 17:14:18 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:18 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:18 arthur capture[1209]: read_frame took 0.031527 seconds
+Jul 06 17:14:19 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:19 arthur capture[1209]: frame 148:
+Jul 06 17:14:19 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:19 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:19 arthur capture[1209]: read_frame took 0.030317 seconds
+Jul 06 17:14:20 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:20 arthur capture[1209]: frame 149:
+Jul 06 17:14:20 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:20 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:20 arthur capture[1209]: read_frame took 0.034529 seconds
+Jul 06 17:14:21 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:21 arthur capture[1209]: frame 150:
+Jul 06 17:14:21 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:21 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:21 arthur capture[1209]: read_frame took 0.034390 seconds
+Jul 06 17:14:22 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:22 arthur capture[1209]: frame 151:
+Jul 06 17:14:22 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:22 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:22 arthur capture[1209]: read_frame took 0.034624 seconds
+Jul 06 17:14:23 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:23 arthur capture[1209]: frame 152:
+Jul 06 17:14:23 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:23 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:23 arthur capture[1209]: read_frame took 0.032211 seconds
+Jul 06 17:14:24 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:24 arthur capture[1209]: frame 153:
+Jul 06 17:14:24 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:24 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:24 arthur capture[1209]: read_frame took 0.034422 seconds
+Jul 06 17:14:25 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:25 arthur capture[1209]: frame 154:
+Jul 06 17:14:25 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:25 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:25 arthur capture[1209]: read_frame took 0.034055 seconds
+Jul 06 17:14:26 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:26 arthur capture[1209]: frame 155:
+Jul 06 17:14:26 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:26 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:26 arthur capture[1209]: read_frame took 0.033944 seconds
+Jul 06 17:14:27 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:27 arthur capture[1209]: frame 156:
+Jul 06 17:14:27 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:27 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:27 arthur capture[1209]: read_frame took 0.033932 seconds
+Jul 06 17:14:28 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:28 arthur capture[1209]: frame 157:
+Jul 06 17:14:28 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:28 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:28 arthur capture[1209]: read_frame took 0.033982 seconds
+Jul 06 17:14:29 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:29 arthur capture[1209]: frame 158:
+Jul 06 17:14:30 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:30 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:30 arthur capture[1209]: read_frame took 0.036036 seconds
+Jul 06 17:14:31 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:31 arthur capture[1209]: frame 159:
+Jul 06 17:14:31 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:31 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:31 arthur capture[1209]: read_frame took 0.036253 seconds
+Jul 06 17:14:32 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:32 arthur capture[1209]: frame 160:
+Jul 06 17:14:32 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:32 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:32 arthur capture[1209]: read_frame took 0.033981 seconds
+Jul 06 17:14:33 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:33 arthur capture[1209]: frame 161:
+Jul 06 17:14:33 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:33 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:33 arthur capture[1209]: read_frame took 0.033936 seconds
+Jul 06 17:14:34 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:34 arthur capture[1209]: frame 162:
+Jul 06 17:14:34 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:34 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:34 arthur capture[1209]: read_frame took 0.034808 seconds
+Jul 06 17:14:35 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:35 arthur capture[1209]: frame 163:
+Jul 06 17:14:35 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:35 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:35 arthur capture[1209]: read_frame took 0.034862 seconds
+Jul 06 17:14:36 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:36 arthur capture[1209]: frame 164:
+Jul 06 17:14:36 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:36 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:36 arthur capture[1209]: read_frame took 0.033954 seconds
+Jul 06 17:14:37 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:37 arthur capture[1209]: frame 165:
+Jul 06 17:14:37 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:37 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:37 arthur capture[1209]: read_frame took 0.031019 seconds
+Jul 06 17:14:38 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:38 arthur capture[1209]: frame 166:
+Jul 06 17:14:38 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:38 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:38 arthur capture[1209]: read_frame took 0.034686 seconds
+Jul 06 17:14:39 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:39 arthur capture[1209]: frame 167:
+Jul 06 17:14:39 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:39 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:39 arthur capture[1209]: read_frame took 0.036103 seconds
+Jul 06 17:14:40 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:40 arthur capture[1209]: frame 168:
+Jul 06 17:14:40 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:40 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:40 arthur capture[1209]: read_frame took 0.036080 seconds
+Jul 06 17:14:41 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:41 arthur capture[1209]: frame 169:
+Jul 06 17:14:41 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:41 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:41 arthur capture[1209]: read_frame took 0.033982 seconds
+Jul 06 17:14:42 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:42 arthur capture[1209]: frame 170:
+Jul 06 17:14:42 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:42 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:42 arthur capture[1209]: read_frame took 0.033905 seconds
+Jul 06 17:14:43 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:43 arthur capture[1209]: frame 171:
+Jul 06 17:14:43 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:43 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:43 arthur capture[1209]: read_frame took 0.034763 seconds
+Jul 06 17:14:44 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:44 arthur capture[1209]: frame 172:
+Jul 06 17:14:44 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:44 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:44 arthur capture[1209]: read_frame took 0.034856 seconds
+Jul 06 17:14:45 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:45 arthur capture[1209]: frame 173:
+Jul 06 17:14:45 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:45 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:45 arthur capture[1209]: read_frame took 0.034698 seconds
+Jul 06 17:14:46 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:46 arthur capture[1209]: frame 174:
+Jul 06 17:14:46 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:46 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:46 arthur capture[1209]: read_frame took 0.034200 seconds
+Jul 06 17:14:47 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:47 arthur capture[1209]: frame 175:
+Jul 06 17:14:47 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:47 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:47 arthur capture[1209]: read_frame took 0.036187 seconds
+Jul 06 17:14:48 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:48 arthur capture[1209]: frame 176:
+Jul 06 17:14:48 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:48 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:48 arthur capture[1209]: read_frame took 0.034651 seconds
+Jul 06 17:14:49 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:49 arthur capture[1209]: frame 177:
+Jul 06 17:14:49 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:49 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:49 arthur capture[1209]: read_frame took 0.034812 seconds
+Jul 06 17:14:50 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:50 arthur capture[1209]: frame 178:
+Jul 06 17:14:50 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:50 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:50 arthur capture[1209]: read_frame took 0.034747 seconds
+Jul 06 17:14:51 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:51 arthur capture[1209]: frame 179:
+Jul 06 17:14:51 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:51 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:51 arthur capture[1209]: read_frame took 0.034940 seconds
+Jul 06 17:14:52 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:52 arthur capture[1209]: frame 180:
+Jul 06 17:14:52 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:52 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:52 arthur capture[1209]: read_frame took 0.034374 seconds
+Jul 06 17:14:53 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:53 arthur capture[1209]: frame 181:
+Jul 06 17:14:53 arthur capture[1209]: wrote 921600 bytes
+Jul 06 17:14:53 arthur capture[1209]: Dump YUYV converted to RGB size 614400
+Jul 06 17:14:53 arthur capture[1209]: read_frame took 0.034599 seconds
+Jul 06 17:14:54 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
+Jul 06 17:14:54 arthur capture[1209]: 
+Jul 06 17:14:54 arthur sudo[1207]: pam_unix(sudo:session): session closed for user root
