@@ -865,7 +865,7 @@ static void open_device(void)
 
 static void usage(FILE *fp, int argc, char **argv)
 {
-        printf(fp,
+        fprintf(fp,
                  "Usage: %s [options]\n\n"
                  "Version 1.3\n"
                  "Options:\n"
