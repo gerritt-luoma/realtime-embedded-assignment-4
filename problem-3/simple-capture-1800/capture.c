@@ -865,7 +865,7 @@ static void open_device(void)
 
 static void usage(FILE *fp, int argc, char **argv)
 {
-        syslog(LOG_CRIT, fp,
+        printf(fp,
                  "Usage: %s [options]\n\n"
                  "Version 1.3\n"
                  "Options:\n"
