@@ -28,6 +28,7 @@
 #include <sys/time.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
+#include <syslog.h>
 
 #include <linux/videodev2.h>
 
