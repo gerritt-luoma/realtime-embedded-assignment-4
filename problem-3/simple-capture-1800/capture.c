@@ -73,7 +73,7 @@ static int              frame_count = (189);
 
 static void errno_exit(const char *s)
 {
-        fsyslog(LOG_CRIT, stderr, "%s error %d, %s\n", s, errno, strerror(errno));
+        syslog(LOG_CRIT, "%s error %d, %s\n", s, errno, strerror(errno));
         exit(EXIT_FAILURE);
 }
 
@@ -295,7 +295,7 @@ static void process_image(const void *p, int size)
     }
 
     fflush(stderr);
-    //fsyslog(LOG_CRIT, stderr, ".");
+    //syslog(LOG_CRIT, stderr, ".");
     fflush(stdout);
 }
 
@@ -448,7 +448,7 @@ static void mainloop(void)
 
             if (0 == r)
             {
-                fsyslog(LOG_CRIT, stderr, "select timeout\n");
+                syslog(LOG_CRIT, "select timeout\n");
                 exit(EXIT_FAILURE);
             }
 
@@ -571,7 +571,7 @@ static void init_read(unsigned int buffer_size)
 
         if (!buffers) 
         {
-                fsyslog(LOG_CRIT, stderr, "Out of memory\n");
+                syslog(LOG_CRIT, "Out of memory\n");
                 exit(EXIT_FAILURE);
         }
 
@@ -580,7 +580,7 @@ static void init_read(unsigned int buffer_size)
 
         if (!buffers[0].start) 
         {
-                fsyslog(LOG_CRIT, stderr, "Out of memory\n");
+                syslog(LOG_CRIT, "Out of memory\n");
                 exit(EXIT_FAILURE);
         }
 }
@@ -599,7 +599,7 @@ static void init_mmap(void)
         {
                 if (EINVAL == errno) 
                 {
-                        fsyslog(LOG_CRIT, stderr, "%s does not support "
+                        syslog(LOG_CRIT, "%s does not support "
                                  "memory mapping\n", dev_name);
                         exit(EXIT_FAILURE);
                 } else 
@@ -610,7 +610,7 @@ static void init_mmap(void)
 
         if (req.count < 2) 
         {
-                fsyslog(LOG_CRIT, stderr, "Insufficient buffer memory on %s\n", dev_name);
+                syslog(LOG_CRIT, "Insufficient buffer memory on %s\n", dev_name);
                 exit(EXIT_FAILURE);
         }
 
@@ -618,7 +618,7 @@ static void init_mmap(void)
 
         if (!buffers) 
         {
-                fsyslog(LOG_CRIT, stderr, "Out of memory\n");
+                syslog(LOG_CRIT, "Out of memory\n");
                 exit(EXIT_FAILURE);
         }
 
@@ -659,7 +659,7 @@ static void init_userp(unsigned int buffer_size)
 
         if (-1 == xioctl(fd, VIDIOC_REQBUFS, &req)) {
                 if (EINVAL == errno) {
-                        fsyslog(LOG_CRIT, stderr, "%s does not support "
+                        syslog(LOG_CRIT, "%s does not support "
                                  "user pointer i/o\n", dev_name);
                         exit(EXIT_FAILURE);
                 } else {
@@ -670,7 +670,7 @@ static void init_userp(unsigned int buffer_size)
         buffers = calloc(4, sizeof(*buffers));
 
         if (!buffers) {
-                fsyslog(LOG_CRIT, stderr, "Out of memory\n");
+                syslog(LOG_CRIT, "Out of memory\n");
                 exit(EXIT_FAILURE);
         }
 
@@ -679,7 +679,7 @@ static void init_userp(unsigned int buffer_size)
                 buffers[n_buffers].start = malloc(buffer_size);
 
                 if (!buffers[n_buffers].start) {
-                        fsyslog(LOG_CRIT, stderr, "Out of memory\n");
+                        syslog(LOG_CRIT, "Out of memory\n");
                         exit(EXIT_FAILURE);
                 }
         }
@@ -695,7 +695,7 @@ static void init_device(void)
     if (-1 == xioctl(fd, VIDIOC_QUERYCAP, &cap))
     {
         if (EINVAL == errno) {
-            fsyslog(LOG_CRIT, stderr, "%s is no V4L2 device\n",
+            syslog(LOG_CRIT, "%s is no V4L2 device\n",
                      dev_name);
             exit(EXIT_FAILURE);
         }
@@ -707,7 +707,7 @@ static void init_device(void)
 
     if (!(cap.capabilities & V4L2_CAP_VIDEO_CAPTURE))
     {
-        fsyslog(LOG_CRIT, stderr, "%s is no video capture device\n",
+        syslog(LOG_CRIT, "%s is no video capture device\n",
                  dev_name);
         exit(EXIT_FAILURE);
     }
@@ -717,7 +717,7 @@ static void init_device(void)
         case IO_METHOD_READ:
             if (!(cap.capabilities & V4L2_CAP_READWRITE))
             {
-                fsyslog(LOG_CRIT, stderr, "%s does not support read i/o\n",
+                syslog(LOG_CRIT, "%s does not support read i/o\n",
                          dev_name);
                 exit(EXIT_FAILURE);
             }
@@ -727,7 +727,7 @@ static void init_device(void)
         case IO_METHOD_USERPTR:
             if (!(cap.capabilities & V4L2_CAP_STREAMING))
             {
-                fsyslog(LOG_CRIT, stderr, "%s does not support streaming i/o\n",
+                syslog(LOG_CRIT, "%s does not support streaming i/o\n",
                          dev_name);
                 exit(EXIT_FAILURE);
             }
@@ -843,20 +843,20 @@ static void open_device(void)
         struct stat st;
 
         if (-1 == stat(dev_name, &st)) {
-                fsyslog(LOG_CRIT, stderr, "Cannot identify '%s': %d, %s\n",
+                syslog(LOG_CRIT, "Cannot identify '%s': %d, %s\n",
                          dev_name, errno, strerror(errno));
                 exit(EXIT_FAILURE);
         }
 
         if (!S_ISCHR(st.st_mode)) {
-                fsyslog(LOG_CRIT, stderr, "%s is no device\n", dev_name);
+                syslog(LOG_CRIT, "%s is no device\n", dev_name);
                 exit(EXIT_FAILURE);
         }
 
         fd = open(dev_name, O_RDWR /* required */ | O_NONBLOCK, 0);
 
         if (-1 == fd) {
-                fsyslog(LOG_CRIT, stderr, "Cannot open '%s': %d, %s\n",
+                syslog(LOG_CRIT, "Cannot open '%s': %d, %s\n",
                          dev_name, errno, strerror(errno));
                 exit(EXIT_FAILURE);
         }
@@ -864,7 +864,7 @@ static void open_device(void)
 
 static void usage(FILE *fp, int argc, char **argv)
 {
-        fsyslog(LOG_CRIT, fp,
+        syslog(LOG_CRIT, fp,
                  "Usage: %s [options]\n\n"
                  "Version 1.3\n"
                  "Options:\n"
@@ -971,6 +971,6 @@ int main(int argc, char **argv)
     stop_capturing();
     uninit_device();
     close_device();
-    fsyslog(LOG_CRIT, stderr, "\n");
+    syslog(LOG_CRIT, "\n");
     return 0;
 }
