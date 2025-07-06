@@ -305,6 +305,12 @@ static int read_frame(void)
 {
     struct v4l2_buffer buf;
     unsigned int i;
+    struct timespec start, end;
+    long seconds, nanoseconds;
+    double elapsed;
+
+    // Start timing
+    clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 
     switch (io)
     {
@@ -320,7 +326,6 @@ static int read_frame(void)
 
                     case EIO:
                         /* Could ignore EIO, see spec. */
-
                         /* fall through */
 
                     default:
@@ -345,11 +350,7 @@ static int read_frame(void)
                         return 0;
 
                     case EIO:
-                        /* Could ignore EIO, but drivers should only set for serious errors, although some set for
-                           non-fatal errors too.
-                         */
                         return 0;
-
 
                     default:
                         syslog(LOG_CRIT, "mmap failure\n");
@@ -362,7 +363,8 @@ static int read_frame(void)
             process_image(buffers[buf.index].start, buf.bytesused);
 
             if (-1 == xioctl(fd, VIDIOC_QBUF, &buf))
-                    errno_exit("VIDIOC_QBUF");
+                errno_exit("VIDIOC_QBUF");
+
             break;
 
         case IO_METHOD_USERPTR:
@@ -379,8 +381,6 @@ static int read_frame(void)
                         return 0;
 
                     case EIO:
-                        /* Could ignore EIO, see spec. */
-
                         /* fall through */
 
                     default:
@@ -389,20 +389,35 @@ static int read_frame(void)
             }
 
             for (i = 0; i < n_buffers; ++i)
-                    if (buf.m.userptr == (unsigned long)buffers[i].start
-                        && buf.length == buffers[i].length)
-                            break;
+                if (buf.m.userptr == (unsigned long)buffers[i].start
+                    && buf.length == buffers[i].length)
+                    break;
 
             assert(i < n_buffers);
 
             process_image((void *)buf.m.userptr, buf.bytesused);
 
             if (-1 == xioctl(fd, VIDIOC_QBUF, &buf))
-                    errno_exit("VIDIOC_QBUF");
+                errno_exit("VIDIOC_QBUF");
+
             break;
     }
 
-    //syslog(LOG_CRIT, "R");
+    // End timing
+    clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+
+    seconds = end.tv_sec - start.tv_sec;
+    nanoseconds = end.tv_nsec - start.tv_nsec;
+
+    if (nanoseconds < 0) {
+        seconds -= 1;
+        nanoseconds += 1000000000;
+    }
+
+    elapsed = seconds + nanoseconds / 1e9;
+
+    syslog(LOG_CRIT, "read_frame took %.6f seconds", elapsed);
+
     return 1;
 }
 
