@@ -86,11 +86,154 @@ Cheese appears to only have full screen effects like mirroring the image, distor
 
 > A: Using starter code, capture a raw image buffer for transformation and processing using example code such as simple-capture. This basic example interfaces to the UVC and USB kernel driver modules through the V4L2 API. Provide a screen shot to prove that you got continuous capture to work with V4L2. To display images you have captured, you will find “eom” to be quite useful, which can be installed with “sudo apt-get install eom”.
 
-TODO:
+Below is the output from running the starter code in `simple-capture`:
+
+```bash
+$ sudo ./capture
+FORCING FORMAT
+allocated buffer 0
+allocated buffer 1
+allocated buffer 2
+allocated buffer 3
+allocated buffer 4
+allocated buffer 5
+frame 1: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 2: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 3: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 4: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 5: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 6: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 7: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 8: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 9: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 10: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 11: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 12: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 13: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 14: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 15: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 16: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 17: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 18: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 19: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 20: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 21: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 22: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 23: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 24: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 25: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 26: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 27: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 28: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 29: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+frame 30: Dump YUYV converted to RGB size 153600
+wrote 230400 bytes
+time_error.tv_sec=0, time_error.tv_nsec=0
+```
+
+When logging into my VNC session and using `eom` to look through the images, I am noticing that the first ~15 images taken by the camera are fully black and after that all of the remaining images are valid captures of my office.  I am wondering if it is because the camera takes time to go from idle to capturing and the program is going too fast for the camera to keep up.
+
+I tried adding a thread sleep after initializing the camera/starting the capture and I am still not seeing an improvement.  There might be a few less black images but there are still a few that are completely devoid of data at the start of the capture.
 
 > B: Download starter code (simple-capture-1800) that captures 1800 frames from your camera using V4L2 and run it as is first to test the code (use “make clean”, “make”, and run – note that make clean will remove test frames). Modify the code so that it uses syslog rather than printf to the console for tracing. Then, compare frame rate for PGM (graymap) and PPM (color) image write-back to the frame sub-directory on your flash filesystem and provide analysis of average and worst-case (lowest) frame rate seen for each.
 
-TODO:
+After running the code, I am seeing that the program differs slightly from the expected behavior as laid out by the question.  This program by default only captures 182 frames as opposed to 1800 frames outlined in the problem statement.  It has the same output as the `simple-capture` program as well.  The program will take a total of 189 captures but the first 7 are always discarded based off the code.  I am wondering if this is because of the issue that I noted in part A of this problem.  The images are captured at a frequency of 1Hz.
+
+After updating the program to use `syslog` instead of `printf`, I also added in timing functionality to the `read_frame()` function.  This function handles **reading** the next frame from the camera, processing it, and writing it to a file which is the complete cycle taken for each frame.  I have captured the logs running with `COLOR_CONVERT_RBG` both defined and undefined and captured them to `ppm-output.log` and `pgm-output.log` respectively.
+
+I have written a python script, `analyze_logs.py`, and have placed it in the `simple-capture-1800` directory.  First, to analyze the default behavior of the program with it outputting the images to grayscale, you can run `python3 analyze_logs.py` and when prompted, input `pgm-output.log`.  This will produce the following output:
+
+```text
+--- Analysis Results for: pgm-output.log ---
+Mean read_frame time: 0.008402 seconds
+Min read_frame time: 0.007256 seconds
+Median read_frame time: 0.008393 seconds
+Max read_frame time: 0.011143 seconds
+------------------------------------------
+Mean read_frame FPS: 119.021305 fps
+Min read_frame FPS: 137.816979 fps
+Median read_frame fps: 119.139811 fps
+Max read_frame fps: 89.742439 fps
+------------------------------------------
+```
+
+Ass seen here, the average time for reading, altering, and storing an image is 0.0084 seconds which translates to ~119.02 frames per second.  Meanwhile, the worst case read time for a frame was 0.0111 seconds which translates to ~89.74 frames per second which is nearly a 30 frame per second drop from the average.  In a soft real time environment this might be acceptable but for hard real time if the period was 0.01, the deadline would have been missed causing potentially catastrophic results.
+
+Next, when analyzing `ppm-output.log` in the same way, the results produced the following:
+
+```
+--- Analysis Results for: ppm-output.log ---
+Mean read_frame time: 0.034039 seconds
+Min read_frame time: 0.029290 seconds
+Median read_frame time: 0.034055 seconds
+Max read_frame time: 0.036320 seconds
+------------------------------------------
+Mean read_frame FPS: 29.378185 fps
+Min read_frame FPS: 34.141345 fps
+Median read_frame fps: 29.364264 fps
+Max read_frame fps: 27.533040 fps
+------------------------------------------
+```
+
+It can be seen that when converting to RGB it takes much longer than just going to gray scale.  This is most likely due to the amount of data being written to disk and the additional processing needed for each pixel.  The average frame time was 0.03404 seconds, or 29.378 frames per second, with a worst case frame time of 0.3632 seconds, or 27.53 frames per second.  It seems like a T of 0.05 seconds, or 20 frames per second, could be a good candidate.
 
 ## Problem 4
 

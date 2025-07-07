@@ -1,13 +1,3 @@
-Jul 06 17:10:04 arthur capture[1173]: Dump YUYV converted to YY size 614400
-Jul 06 17:10:04 arthur capture[1173]: read_frame took 0.008302 seconds
-Jul 06 17:10:05 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:10:05 arthur capture[1173]: frame 181:
-Jul 06 17:10:05 arthur capture[1173]: wrote 307200 bytes
-Jul 06 17:10:05 arthur capture[1173]: Dump YUYV converted to YY size 614400
-Jul 06 17:10:05 arthur capture[1173]: read_frame took 0.009756 seconds
-Jul 06 17:10:06 arthur capture[1173]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:10:06 arthur capture[1173]: 
-Jul 06 17:10:06 arthur sudo[1171]: pam_unix(sudo:session): session closed for user root
 Jul 06 17:11:38 arthur sudo[1207]:  gerritt : TTY=pts/0 ; PWD=/home/gerritt/repos/realtime-embedded-assignment-4/problem-3/simple-capture-1800 ; USER=root ; COMMAND=./capture
 Jul 06 17:11:38 arthur sudo[1207]: pam_unix(sudo:session): session opened for user root(uid=0) by gerritt(uid=1000)
 Jul 06 17:11:38 arthur kernel: usb 1-1.1: reset high-speed USB device number 3 using xhci_hcd
@@ -18,27 +8,6 @@ Jul 06 17:11:39 arthur capture[1209]: allocated buffer 2
 Jul 06 17:11:39 arthur capture[1209]: allocated buffer 3
 Jul 06 17:11:39 arthur capture[1209]: allocated buffer 4
 Jul 06 17:11:39 arthur capture[1209]: allocated buffer 5
-Jul 06 17:11:39 arthur capture[1209]: frame -7:
-Jul 06 17:11:39 arthur capture[1209]: read_frame took 0.032321 seconds
-Jul 06 17:11:40 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:40 arthur capture[1209]: frame -6:
-Jul 06 17:11:40 arthur capture[1209]: read_frame took 0.029998 seconds
-Jul 06 17:11:41 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:41 arthur capture[1209]: frame -5:
-Jul 06 17:11:41 arthur capture[1209]: read_frame took 0.029999 seconds
-Jul 06 17:11:42 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:42 arthur capture[1209]: frame -4:
-Jul 06 17:11:42 arthur capture[1209]: read_frame took 0.029998 seconds
-Jul 06 17:11:43 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:43 arthur capture[1209]: frame -3:
-Jul 06 17:11:43 arthur capture[1209]: read_frame took 0.030085 seconds
-Jul 06 17:11:44 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:44 arthur capture[1209]: frame -2:
-Jul 06 17:11:44 arthur capture[1209]: read_frame took 0.030003 seconds
-Jul 06 17:11:45 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
-Jul 06 17:11:45 arthur capture[1209]: frame -1:
-Jul 06 17:11:45 arthur capture[1209]: read_frame took 0.030115 seconds
-Jul 06 17:11:46 arthur capture[1209]: time_error.tv_sec=0, time_error.tv_nsec=0
 Jul 06 17:11:46 arthur capture[1209]: frame 0:
 Jul 06 17:11:46 arthur capture[1209]: wrote 921600 bytes
 Jul 06 17:11:46 arthur capture[1209]: Dump YUYV converted to RGB size 614400
