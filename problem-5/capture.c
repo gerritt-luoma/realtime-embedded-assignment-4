@@ -62,9 +62,9 @@
 //#define FRAMES_PER_SEC (25)
 #define FRAMES_PER_SEC (30)
 
-#define COLOR_CONVERT_RGB
-#define DUMP_FRAMES
-//#define DUMP_PPM
+// #define COLOR_CONVERT_RGB
+// #define DUMP_FRAMES
+// #define DUMP_PPM
 
 // Format is used by a number of functions, so made as a file global
 static struct v4l2_format fmt;
@@ -526,19 +526,19 @@ static void mainloop(void)
                 if(nanosleep(&read_delay, &time_error) != 0)
                     perror("nanosleep");
                 else
-		{
-		    if(framecnt > 1)
-	            {
-		        clock_gettime(CLOCK_MONOTONIC, &time_now);
-		        fnow = (double)time_now.tv_sec + (double)time_now.tv_nsec / 1000000000.0;
+                {
+                    if(framecnt > 1)
+                    {
+                        clock_gettime(CLOCK_MONOTONIC, &time_now);
+                        fnow = (double)time_now.tv_sec + (double)time_now.tv_nsec / 1000000000.0;
                         //printf("REPLACE read at %lf, @ %lf FPS\n", (fnow-fstart), (double)(framecnt+1) / (fnow-fstart));
                         syslog(LOG_CRIT, "SIMPCAP: read at %lf, @ %lf FPS\n", (fnow-fstart), (double)(framecnt+1) / (fnow-fstart));
-		    }
-		    else
-		    {
+                    }
+                    else
+                    {
                         printf("at %lf\n", fnow);
-		    }
-		}
+                    }
+                }
 
                 count--;
                 break;
