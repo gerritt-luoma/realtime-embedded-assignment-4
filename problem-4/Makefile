@@ -1,36 +1,33 @@
-INCLUDE_DIRS = 
-LIB_DIRS = 
-CC = gcc
+# Directories
+INCLUDE_DIRS =
+LIB_DIRS    =
 
-CDEFS=
-#CFLAGS= -O0 $(INCLUDE_DIRS) $(CDEFS)
-#CFLAGS= -O0 -msse3 -malign-double $(INCLUDE_DIRS) $(CDEFS)
-#CFLAGS= -O2 -msse3 -malign-double $(INCLUDE_DIRS) $(CDEFS)
-#CFLAGS= -O3 $(INCLUDE_DIRS) $(CDEFS)
-# CFLAGS= -O3 -msse3 $(INCLUDE_DIRS) $(CDEFS)
-#CFLAGS= -O3 -mssse3 $(INCLUDE_DIRS) $(CDEFS)
-LIBS=-lpthread
+# Compiler & flags
+CC      = gcc
+CFLAGS  = $(addprefix -I,$(INCLUDE_DIRS)) $(CDEFS)
+LDFLAGS = $(addprefix -L,$(LIB_DIRS))
+LIBS    = -lpthread
 
-PRODUCT=sharpen_grid
-#PRODUCT=sharpen
+# Sources & targets
+SRCS        = sharpen.c sharpen-240.c
+OBJS        = $(SRCS:.c=.o)
+EXECUTABLES = sharpen sharpen-240
 
-HFILES= 
-# CFILES= sharpen_grid.c
-CFILES= sharpen.c
+.PHONY: all clean depend
 
-SRCS= ${HFILES} ${CFILES}
-OBJS= ${CFILES:.c=.o}
+all: $(EXECUTABLES)
 
-all:	${PRODUCT}
+# Link each executable from its .o
+%: %.o
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $< $(LIBS)
 
 clean:
-	-rm -f *.o *.NEW *~
-	-rm -f ${PRODUCT} ${DERIVED} ${GARBAGE}
-
-${PRODUCT}:	${OBJS}
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
+	-rm -f *.o *~ $(EXECUTABLES)
 
 depend:
+	@echo "Running makedepend (if installed)..."
+	@makedepend -- $(CFLAGS) -- $(SRCS) 2>/dev/null || true
 
+# Compile .c to .o
 .c.o:
 	$(CC) $(CFLAGS) -c $<

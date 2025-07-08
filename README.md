@@ -239,15 +239,36 @@ It can be seen that when converting to RGB it takes much longer than just going 
 
 > Choose ONE continuous transformation for each acquired frame such as color conversion (Lecture-Cont-Media.pdf, slide 5), conversion to grayscale (slide 6), negative image (new_pixel = saturation – pixel), brightness/contrast adjustment (e.g., /cbrighten/brighten.c), or sharpening (/sharpen-psf/sharpen.c) and consider how to apply this to a real-time stream of image frames acquired from your camera rather than just one image file (PPM in the examples).
 
-TODO:
+I have chosen to use the provided `sharpen` example to test sharpening images as a part of real time processing.
 
 > A: Show a screen shot to prove you built and ran the code and a before and after transform example image.
 
-TODO:
+I have updated the makefile so that it will build the `sharpen.c` file.  This file takes in two inputs.  One to provide the path to an input image which has to be `400x300` exactly and in the .ppm format and one to provide the path to where the resulting transformed image should be output which must also be a .ppm format.
+
+I will be using the provided starter image, `Cactus-120kpixel.ppm`, to test sharpening an image and timing it.  The starting image is:
+
+![Cactus before sharpening](./assets/cactus-image-before-sharpening.png)
+
+Then, after building and running `sudo ./sharpen Cactus-120kpixel.ppm Cactus-120kpixel-sharpened.ppm` I get the resulting image:
+
+![Cactus after sharpening](./assets/cactus-image-after-sharpening.png)
+
+The original image appears to have been a little blurry and after the transformation was performed, the image now appears with more distinct edges on the edges of objects in the image.  It also appears a bit more distinct when transitioning from object to object making like colors more similar and different colors more distinct.
 
 > B: Provide a detailed explanation of your code and research uses for the continuous transformations and describe how this might be used in a machine vision application.
 
-TODO:
+The way that this code works is as follows:
+
+1. The initial `.ppm` image and the output `.ppm` image are both opened with the input image being opened with the Read Only flag and the output image being opened with the Read/Write and Create flags meaning a new file will be created when the program is ran.
+2. The header of the input image is parsed which is 21 bytes long.
+3. The input image is then loaded into three individaul buffers, `R[], G[], B[]` which are the 3 color channels.  Each of these buffers is 120,000 bytes long since the expected input image is 400x300.  The color channels are also loaded into `convR[], convG[], convB[]` which are the same size.
+4. The program then loops through each pixel in the image other than the first and last pixel of each row and column and convolves the each RGB value of the pixel with the RGB value of all of the surrounding pixels multiplied by a Point Spread Function.
+5. After looping through each of the pixels and storing the convolved values in `convR[], convB[], convB[]`, it writes the original header into the output file and then outputs the RGB sets back into the image.
+
+Potential uses for an image sharpening algorithm in a machine vision application:
+1. Sharpening an image enhances the distinct features within an image.  This makes it easier for other algorithms to distinguish objects from the background or other objects.  This will also improve the accuracy of object detection if it is easier.
+2. A sharpened image is easier to extract features of an image.  This will improve both training and run time performance of tasks like image classification or segmentation.
+3. Sharpening will also help with reducing blur.  If the camera is blurry for any reason, sharpening can help un-blur the image a bit to improve the image quality.
 
 > C: What was the best frame rate for continuous transform processing for the transform you chose to investigate?
 
