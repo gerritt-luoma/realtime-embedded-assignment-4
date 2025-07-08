@@ -12,7 +12,8 @@
 #define NUM_ITERATIONS 240
 
 // Comment this line to disable image output (used for timing only)
-#define WRITE_IMAGE
+// #define WRITE_IMAGE
+#define LOAD_ONCE
 
 typedef double FLOAT;
 typedef unsigned int UINT32;
@@ -39,10 +40,8 @@ void sharpen_image()
     int i, j;
     FLOAT temp;
 
-    printf("Sharpening image \n");
     for (i = 1; i < IMG_HEIGHT - 1; i++)
     {
-        printf("Starting image row %d\n", i);
         for (j = 1; j < IMG_WIDTH - 1; j++)
         {
             int idx = i * IMG_WIDTH + j;
@@ -106,18 +105,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-
-    for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
-    {
-        printf("Starting iteration %d\n", iteration);
-        clock_gettime(CLOCK_MONOTONIC, &start);
-        if ((fdin = open(argv[1], O_RDONLY)) < 0)
-        {
-            perror("Error opening input file");
-            return -1;
-        }
-
-        printf("Reading in file\n");
+    #ifdef LOAD_ONCE
         int bytesLeft = 21, bytesRead = 0;
         do
         {
@@ -134,6 +122,36 @@ int main(int argc, char *argv[])
             read(fdin, &B[i], 1);
         }
         close(fdin);
+    #endif /* LOAD_ONCE */
+
+    for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
+    {
+        clock_gettime(CLOCK_MONOTONIC, &start);
+
+        #ifndef LOAD_ONCE
+            if ((fdin = open(argv[1], O_RDONLY)) < 0)
+            {
+                perror("Error opening input file");
+                return -1;
+            }
+
+            int bytesLeft = 21, bytesRead = 0;
+            do
+            {
+                bytesRead = read(fdin, header + (21 - bytesLeft), bytesLeft);
+                bytesLeft -= bytesRead;
+            }
+            while (bytesLeft > 0);
+            header[21] = '\0';
+
+            for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; ++i)
+            {
+                read(fdin, &R[i], 1);
+                read(fdin, &G[i], 1);
+                read(fdin, &B[i], 1);
+            }
+            close(fdin);
+        #endif /* !LOAD_ONCE */
 
         sharpen_image();
 
