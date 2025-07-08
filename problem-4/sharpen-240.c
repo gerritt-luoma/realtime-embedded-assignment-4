@@ -42,7 +42,7 @@ void sharpen_image()
     printf("Sharpening image \n");
     for (i = 1; i < IMG_HEIGHT - 1; i++)
     {
-        printf("Starting image row %d", i);
+        printf("Starting image row %d\n", i);
         for (j = 1; j < IMG_WIDTH - 1; j++)
         {
             int idx = i * IMG_WIDTH + j;
@@ -106,8 +106,6 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    openlog("sharpen", LOG_PID | LOG_CONS, LOG_USER);
-
     clock_gettime(CLOCK_MONOTONIC, &start);
 
     for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
@@ -164,7 +162,6 @@ int main(int argc, char *argv[])
     double elapsed = seconds + nanoseconds * 1e-9;
 
     syslog(LOG_CRIT, "Total time for %d iterations: %.3f seconds", NUM_ITERATIONS, elapsed);
-    closelog();
 
     return 0;
 }
