@@ -301,12 +301,19 @@ static void process_image(const void *p, int size)
         // Pixels are YU and YV alternating, so YUYV which is 4 bytes
         // We want RGB, so RGBRGB which is 6 bytes
         // First convert to RGB which can then be used for sharpening
+        struct timespec rgbstart, rgbstop;
+        double rgbstarttime, rgbstoptime;
+        clock_gettime(CLOCK_MONOTONIC, &rgbstart);
         for(i=0, newi=0; i<size; i=i+4, newi=newi+6)
         {
             y_temp=(int)pptr[i]; u_temp=(int)pptr[i+1]; y2_temp=(int)pptr[i+2]; v_temp=(int)pptr[i+3];
             yuv2rgb(y_temp, u_temp, v_temp, &bigbuffer[newi], &bigbuffer[newi+1], &bigbuffer[newi+2]);
             yuv2rgb(y2_temp, u_temp, v_temp, &bigbuffer[newi+3], &bigbuffer[newi+4], &bigbuffer[newi+5]);
         }
+        clock_gettime(CLOCK_MONOTONIC, &rgbstop);
+        rgbstarttime = (double)rgbstart.tv_sec + (double)rgbstart.tv_nsec / 1000000000.0;
+        rgbstoptime  = (double)rgbstop.tv_sec  + (double)rgbstop.tv_nsec / 1000000000.0;
+        syslog(LOG_CRIT, "SIMPCAP: converted to RGB in %.6f\n", (rgbstarttime-rgbstoptime));
 
         // Skip first and last row, no neighbors to convolve with
         for(int i=1; i<((VRES)-1); i++)
