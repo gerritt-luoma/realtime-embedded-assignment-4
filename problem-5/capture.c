@@ -298,10 +298,10 @@ static void process_image(const void *p, int size)
         }
 
         // Skip first and last row, no neighbors to convolve with
-        for(i=1; i<((VRES)-1); i++)
+        for(int i=1; i<((VRES)-1); i++)
         {
             // Skip first and last column, no neighbors to convolve with
-            for(j=1; j<((HRES)-1); j++)
+            for(int j=1; j<((HRES)-1); j++)
             {
                 int l1, l2, l3, m1, m2, m3, r1, r2, r3;
                 float temp;
@@ -360,7 +360,7 @@ static void process_image(const void *p, int size)
                 temp += (PSF[8] * (float)bigbuffer[r3 + 2]);
                 if(temp<0.0) temp=0.0;
                 if(temp>255.0) temp=255.0;
-                bigbuffer_processed[(i*IMG_WIDTH)+j]=(unsigned char)temp;
+                bigbuffer_processed[m2 + 2]=(unsigned char)temp;
             }
         }
 
