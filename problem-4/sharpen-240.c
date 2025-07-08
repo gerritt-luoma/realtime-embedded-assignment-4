@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
 
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    for (int i = 0; i < NUM_ITERATIONS; ++i)
+    for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
     {
         if ((fdin = open(argv[1], O_RDONLY)) < 0)
         {
@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
         while (bytesLeft > 0);
         header[21] = '\0';
 
-        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; i++)
+        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; ++i)
         {
             read(fdin, &R[i], 1);
             read(fdin, &G[i], 1);
@@ -143,7 +143,7 @@ int main(int argc, char *argv[])
         }
 
         write(fdout, header, 21);
-        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; i++)
+        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; ++i)
         {
             write(fdout, &convR[i], 1);
             write(fdout, &convG[i], 1);
