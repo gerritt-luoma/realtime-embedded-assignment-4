@@ -106,6 +106,12 @@ int main(int argc, char *argv[])
     }
 
     #ifdef LOAD_ONCE
+        if ((fdin = open(argv[1], O_RDONLY)) < 0)
+        {
+            perror("Error opening input file");
+            return -1;
+        }
+
         int bytesLeft = 21, bytesRead = 0;
         do
         {
