@@ -312,21 +312,22 @@ static void process_image(const void *p, int size)
 
                 // Precompute middle column idxs
                 m1 = (((i)*HRES)+j-1) * 3;
-                m1 = (((i)*HRES)+j)   * 3; // Current pixel
-                m1 = (((i)*HRES)+j+1) * 3;
+                m2 = (((i)*HRES)+j)   * 3; // Current pixel
+                m3 = (((i)*HRES)+j+1) * 3;
 
                 // Precompute right column idxs
                 r1 = (((i+1)*HRES)+j-1) * 3;
                 r2 = (((i+1)*HRES)+j)   * 3;
                 r3 = (((i+1)*HRES)+j+1) * 3;
 
+                // Process all of the reds
                 temp=0;
                 temp += (PSF[0] * (float)bigbuffer[l1]);
                 temp += (PSF[1] * (float)bigbuffer[l2]);
                 temp += (PSF[2] * (float)bigbuffer[l3]);
                 temp += (PSF[3] * (float)bigbuffer[m1]);
-                temp += (PSF[4] * (float)bigbuffer[m1]);
-                temp += (PSF[5] * (float)bigbuffer[m1]);
+                temp += (PSF[4] * (float)bigbuffer[m2]);
+                temp += (PSF[5] * (float)bigbuffer[m3]);
                 temp += (PSF[6] * (float)bigbuffer[r1]);
                 temp += (PSF[7] * (float)bigbuffer[r2]);
                 temp += (PSF[8] * (float)bigbuffer[r3]);
@@ -334,13 +335,14 @@ static void process_image(const void *p, int size)
                 if(temp>255.0) temp=255.0;
                 bigbuffer_processed[m2]=(unsigned char)temp;
 
+                // Process all of the greens
                 temp=0;
                 temp += (PSF[0] * (float)bigbuffer[l1 + 1]);
                 temp += (PSF[1] * (float)bigbuffer[l2 + 1]);
                 temp += (PSF[2] * (float)bigbuffer[l3 + 1]);
                 temp += (PSF[3] * (float)bigbuffer[m1 + 1]);
-                temp += (PSF[4] * (float)bigbuffer[m1 + 1]);
-                temp += (PSF[5] * (float)bigbuffer[m1 + 1]);
+                temp += (PSF[4] * (float)bigbuffer[m2 + 1]);
+                temp += (PSF[5] * (float)bigbuffer[m3 + 1]);
                 temp += (PSF[6] * (float)bigbuffer[r1 + 1]);
                 temp += (PSF[7] * (float)bigbuffer[r2 + 1]);
                 temp += (PSF[8] * (float)bigbuffer[r3 + 1]);
@@ -348,13 +350,14 @@ static void process_image(const void *p, int size)
                 if(temp>255.0) temp=255.0;
                 bigbuffer_processed[m2 + 1]=(unsigned char)temp;
 
+                // Process all of the blues
                 temp=0;
                 temp += (PSF[0] * (float)bigbuffer[l1 + 2]);
                 temp += (PSF[1] * (float)bigbuffer[l2 + 2]);
                 temp += (PSF[2] * (float)bigbuffer[l3 + 2]);
                 temp += (PSF[3] * (float)bigbuffer[m1 + 2]);
-                temp += (PSF[4] * (float)bigbuffer[m1 + 2]);
-                temp += (PSF[5] * (float)bigbuffer[m1 + 2]);
+                temp += (PSF[4] * (float)bigbuffer[m2 + 2]);
+                temp += (PSF[5] * (float)bigbuffer[m3 + 2]);
                 temp += (PSF[6] * (float)bigbuffer[r1 + 2]);
                 temp += (PSF[7] * (float)bigbuffer[r2 + 2]);
                 temp += (PSF[8] * (float)bigbuffer[r3 + 2]);
