@@ -272,7 +272,89 @@ Potential uses for an image sharpening algorithm in a machine vision application
 
 > C: What was the best frame rate for continuous transform processing for the transform you chose to investigate?
 
-TODO:
+I have added a new file named `sharpen-240.c` that performs the same operations as `sharpen.c` but instead it now will load the file, process it, and store the file a total of 240 times.  During this time, the program will write to `syslog` the following message each iteration: `Processing time: XXXX seconds`.  I have added in two new define settings, `LOAD_ONCE` and `WRITE_IMAGE`, to allow for different levels of testing.  When you only have `WRITE_IMAGE` defined, the program will load the file, process it, and write it back each iteration which is expected to take the most amount of time.  The second permuation is having neither defined which will cause the program to read the file and process it each iteration but it will not write the file back.  This will take a medium amount of time per iteration.  The final permutation that I will test is having only `LOAD_ONCE` defined which will cause the program to load in the image from the source .ppm file once before entering the processing iterations which will cause it to only process the image each iteration which should cause it to be relatively fast.  I have added in a python processing file called `analyze_logs.py` which is ran in the same way as the python file in problem 3 and will generate the same output.  The results can be found below:
+
+The test with `WRITE_IMAGE` defined and `LOAD_ONCE` undefined can be found in the file `load-and-store-all.log`.:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze (e.g., pgm-output.log): load-and-store-all.log
+
+--- Analysis Results for: load-and-store-all.log ---
+Mean read_frame time: 0.771513 seconds
+Min read_frame time: 0.759106 seconds
+Median read_frame time: 0.771093 seconds
+Max read_frame time: 0.812216 seconds
+------------------------------------------
+Mean read_frame FPS: 1.296154 fps
+Min read_frame FPS: 1.317339 fps
+Median read_frame fps: 1.296860 fps
+Max read_frame fps: 1.231200 fps
+------------------------------------------
+```
+
+The results for this test are fairly surprising.  I believe it is because loading and storing the image through flash operations is extremely slow.  This would be borderline unusable for most projects.
+
+The test with neither defined can be found in the file `load-and-no-store.log`.:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze (e.g., pgm-output.log): load-and-no-store.log
+
+--- Analysis Results for: load-and-no-store.log ---
+Mean read_frame time: 0.321949 seconds
+Min read_frame time: 0.314823 seconds
+Median read_frame time: 0.322284 seconds
+Max read_frame time: 0.396265 seconds
+------------------------------------------
+Mean read_frame FPS: 3.106085 fps
+Min read_frame FPS: 3.176388 fps
+Median read_frame fps: 3.102853 fps
+Max read_frame fps: 2.523564 fps
+------------------------------------------
+```
+
+When running the test without storing the file after processing, the average time is improved by over 50% but the worst case time is still around 2.52 frames per second which is not the best.  I believe once again that the bottle neck is the flash operations.  When reading from the camera it is much quicker which allows for the transformation to be quicker.
+
+The test with `LOAD_ONCE` defined and `WRITE_IMAGE` undefined can be found in the file `load-once-store-none.log`.:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze (e.g., pgm-output.log): load-once-store-none.log
+
+--- Analysis Results for: load-once-store-none.log ---
+Mean read_frame time: 0.025209 seconds
+Min read_frame time: 0.025128 seconds
+Median read_frame time: 0.025198 seconds
+Max read_frame time: 0.025671 seconds
+------------------------------------------
+Mean read_frame FPS: 39.667795 fps
+Min read_frame FPS: 39.796243 fps
+Median read_frame fps: 39.686477 fps
+Max read_frame fps: 38.954462 fps
+------------------------------------------
+```
+
+The results here are much better with the processing of the frame taking on average 0.25 seconds allowinf for a frame rate of almost 39.66 frames per second.  This still is taking quite a bit of time.  I am going to try adding the `-O3` optimization to improve the processing further.  I will put it under the file name `load-once-store-none-O3-optimization.log`.
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze (e.g., pgm-output.log): load-once-store-none-O3-optimization.log
+
+--- Analysis Results for: load-once-store-none-O3-optimization.log ---
+Mean read_frame time: 0.004438 seconds
+Min read_frame time: 0.004418 seconds
+Median read_frame time: 0.004434 seconds
+Max read_frame time: 0.004858 seconds
+------------------------------------------
+Mean read_frame FPS: 225.347034 fps
+Min read_frame FPS: 226.346763 fps
+Median read_frame fps: 225.529995 fps
+Max read_frame fps: 205.846027 fps
+------------------------------------------
+```
+
+This is a much better performance simply by adding the `-O3` comiler flag.  I am certain that if I were to apply the optimization to the other runs I would see a similar performance boost.  This is a total of an 82.4% performance boost giving hundreds of frames per second which is more than adequate for running some form of machine vision.
 
 > Note that your real bottleneck may be writing your frames to your flash file system device, so try disabling frame write-back to the frame sub-directory and transforming frames, but not saving them.
 

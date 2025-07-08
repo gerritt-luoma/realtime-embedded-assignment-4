@@ -1,13 +1,3 @@
-Jul 07 19:34:45 arthur sharpen-240[5038]: Processing time: 0.756090 seconds
-Jul 07 19:34:46 arthur sharpen-240[5038]: Processing time: 0.758048 seconds
-Jul 07 19:34:47 arthur sharpen-240[5038]: Processing time: 0.755446 seconds
-Jul 07 19:34:47 arthur sharpen-240[5038]: Processing time: 0.755917 seconds
-Jul 07 19:34:48 arthur sharpen-240[5038]: Processing time: 0.755379 seconds
-Jul 07 19:34:49 arthur sharpen-240[5038]: Processing time: 0.754824 seconds
-Jul 07 19:34:50 arthur sharpen-240[5038]: Processing time: 0.755536 seconds
-Jul 07 19:34:50 arthur sharpen-240[5038]: Processing time: 0.755097 seconds
-Jul 07 19:34:51 arthur sharpen-240[5038]: Processing time: 0.756786 seconds
-Jul 07 19:34:51 arthur sudo[5036]: pam_unix(sudo:session): session closed for user root
 Jul 07 19:35:14 arthur sudo[5057]:  gerritt : TTY=pts/2 ; PWD=/home/gerritt/repos/realtime-embedded-assignment-4/problem-4 ; USER=root ; COMMAND=./sharpen-240 Cactus-120kpixel.ppm Cactus-120kpixel-sharpen.ppm
 Jul 07 19:35:14 arthur sudo[5057]: pam_unix(sudo:session): session opened for user root(uid=0) by gerritt(uid=1000)
 Jul 07 19:35:15 arthur sharpen-240[5059]: Processing time: 0.762048 seconds
