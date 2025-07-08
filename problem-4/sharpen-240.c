@@ -39,8 +39,10 @@ void sharpen_image()
     int i, j;
     FLOAT temp;
 
+    printf("Sharpening image \n");
     for (i = 1; i < IMG_HEIGHT - 1; i++)
     {
+        printf("Starting image row %d", i);
         for (j = 1; j < IMG_WIDTH - 1; j++)
         {
             int idx = i * IMG_WIDTH + j;
@@ -110,12 +112,14 @@ int main(int argc, char *argv[])
 
     for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
     {
+        printf("Starting iteration %d\n", iteration);
         if ((fdin = open(argv[1], O_RDONLY)) < 0)
         {
             perror("Error opening input file");
             return -1;
         }
 
+        printf("Reading in file\n");
         int bytesLeft = 21, bytesRead = 0;
         do
         {
