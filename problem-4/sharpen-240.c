@@ -3,146 +3,164 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
-
+#include <time.h>
+#include <string.h>
+#include <syslog.h>
 
 #define IMG_HEIGHT (300)
 #define IMG_WIDTH (400)
+#define NUM_ITERATIONS 240
+
+// Comment this line to disable image output (used for timing only)
+#define WRITE_IMAGE
 
 typedef double FLOAT;
-
 typedef unsigned int UINT32;
 typedef unsigned long long int UINT64;
 typedef unsigned char UINT8;
 
-// PPM Edge Enhancement Code
-//
 UINT8 header[22];
-UINT8 R[IMG_HEIGHT*IMG_WIDTH];
-UINT8 G[IMG_HEIGHT*IMG_WIDTH];
-UINT8 B[IMG_HEIGHT*IMG_WIDTH];
-UINT8 convR[IMG_HEIGHT*IMG_WIDTH];
-UINT8 convG[IMG_HEIGHT*IMG_WIDTH];
-UINT8 convB[IMG_HEIGHT*IMG_WIDTH];
+UINT8 R[IMG_HEIGHT * IMG_WIDTH];
+UINT8 G[IMG_HEIGHT * IMG_WIDTH];
+UINT8 B[IMG_HEIGHT * IMG_WIDTH];
+UINT8 convR[IMG_HEIGHT * IMG_WIDTH];
+UINT8 convG[IMG_HEIGHT * IMG_WIDTH];
+UINT8 convB[IMG_HEIGHT * IMG_WIDTH];
 
 #define K 4.0
+FLOAT PSF[9] = {
+    -K / 8.0, -K / 8.0, -K / 8.0,
+    -K / 8.0, K + 1.0,  -K / 8.0,
+    -K / 8.0, -K / 8.0, -K / 8.0
+};
 
-FLOAT PSF[9] = {-K/8.0, -K/8.0, -K/8.0, -K/8.0, K+1.0, -K/8.0, -K/8.0, -K/8.0, -K/8.0};
+void sharpen_image()
+{
+    int i, j;
+    FLOAT temp;
 
+    for (i = 1; i < IMG_HEIGHT - 1; i++)
+    {
+        for (j = 1; j < IMG_WIDTH - 1; j++)
+        {
+            int idx = i * IMG_WIDTH + j;
+
+            // Red
+            temp = 0.0;
+            temp += PSF[0] * R[((i - 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[1] * R[((i - 1) * IMG_WIDTH) + j];
+            temp += PSF[2] * R[((i - 1) * IMG_WIDTH) + j + 1];
+            temp += PSF[3] * R[((i) * IMG_WIDTH) + j - 1];
+            temp += PSF[4] * R[((i) * IMG_WIDTH) + j];
+            temp += PSF[5] * R[((i) * IMG_WIDTH) + j + 1];
+            temp += PSF[6] * R[((i + 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[7] * R[((i + 1) * IMG_WIDTH) + j];
+            temp += PSF[8] * R[((i + 1) * IMG_WIDTH) + j + 1];
+            if (temp < 0.0) temp = 0.0;
+            if (temp > 255.0) temp = 255.0;
+            convR[idx] = (UINT8)temp;
+
+            // Green
+            temp = 0.0;
+            temp += PSF[0] * G[((i - 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[1] * G[((i - 1) * IMG_WIDTH) + j];
+            temp += PSF[2] * G[((i - 1) * IMG_WIDTH) + j + 1];
+            temp += PSF[3] * G[((i) * IMG_WIDTH) + j - 1];
+            temp += PSF[4] * G[((i) * IMG_WIDTH) + j];
+            temp += PSF[5] * G[((i) * IMG_WIDTH) + j + 1];
+            temp += PSF[6] * G[((i + 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[7] * G[((i + 1) * IMG_WIDTH) + j];
+            temp += PSF[8] * G[((i + 1) * IMG_WIDTH) + j + 1];
+            if (temp < 0.0) temp = 0.0;
+            if (temp > 255.0) temp = 255.0;
+            convG[idx] = (UINT8)temp;
+
+            // Blue
+            temp = 0.0;
+            temp += PSF[0] * B[((i - 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[1] * B[((i - 1) * IMG_WIDTH) + j];
+            temp += PSF[2] * B[((i - 1) * IMG_WIDTH) + j + 1];
+            temp += PSF[3] * B[((i) * IMG_WIDTH) + j - 1];
+            temp += PSF[4] * B[((i) * IMG_WIDTH) + j];
+            temp += PSF[5] * B[((i) * IMG_WIDTH) + j + 1];
+            temp += PSF[6] * B[((i + 1) * IMG_WIDTH) + j - 1];
+            temp += PSF[7] * B[((i + 1) * IMG_WIDTH) + j];
+            temp += PSF[8] * B[((i + 1) * IMG_WIDTH) + j + 1];
+            if (temp < 0.0) temp = 0.0;
+            if (temp > 255.0) temp = 255.0;
+            convB[idx] = (UINT8)temp;
+        }
+    }
+}
 
 int main(int argc, char *argv[])
 {
-    int fdin, fdout, bytesRead=0, bytesLeft, i, j;
-    UINT64 microsecs=0, millisecs=0;
-    FLOAT temp;
-    
-    if(argc < 3)
+    int fdin, fdout;
+    struct timespec start, end;
+
+    if (argc < 3)
     {
-       printf("Usage: sharpen input_file.ppm output_file.ppm\n");
-       exit(-1);
+        printf("Usage: %s input.ppm output.ppm\n", argv[0]);
+        return -1;
     }
-    else
+
+    openlog("sharpen", LOG_PID | LOG_CONS, LOG_USER);
+
+    clock_gettime(CLOCK_MONOTONIC, &start);
+
+    for (int i = 0; i < NUM_ITERATIONS; ++i)
     {
-        if((fdin = open(argv[1], O_RDONLY, 0644)) < 0)
+        if ((fdin = open(argv[1], O_RDONLY)) < 0)
         {
-            printf("Error opening %s\n", argv[1]);
+            perror("Error opening input file");
+            return -1;
         }
-        //else
-        //    printf("File opened successfully\n");
 
-        if((fdout = open(argv[2], (O_RDWR | O_CREAT), 0666)) < 0)
+        int bytesLeft = 21, bytesRead = 0;
+        do
         {
-            printf("Error opening %s\n", argv[1]);
+            bytesRead = read(fdin, header + (21 - bytesLeft), bytesLeft);
+            bytesLeft -= bytesRead;
         }
-        //else
-        //    printf("Output file=%s opened successfully\n", "sharpen.ppm");
-    }
+        while (bytesLeft > 0);
+        header[21] = '\0';
 
-    bytesLeft=21;
-
-    //printf("Reading header\n");
-
-    do
-    {
-        //printf("bytesRead=%d, bytesLeft=%d\n", bytesRead, bytesLeft);
-        bytesRead=read(fdin, (void *)header, bytesLeft);
-        bytesLeft -= bytesRead;
-    } while(bytesLeft > 0);
-
-    header[21]='\0';
-
-    //printf("header = %s\n", header); 
-
-    // Read RGB data
-    for(i=0; i<IMG_HEIGHT*IMG_WIDTH; i++)
-    {
-        read(fdin, (void *)&R[i], 1); convR[i]=R[i];
-        read(fdin, (void *)&G[i], 1); convG[i]=G[i];
-        read(fdin, (void *)&B[i], 1); convB[i]=B[i];
-    }
-
-    // Skip first and last row, no neighbors to convolve with
-    for(i=1; i<((IMG_HEIGHT)-1); i++)
-    {
-
-        // Skip first and last column, no neighbors to convolve with
-        for(j=1; j<((IMG_WIDTH)-1); j++)
+        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; i++)
         {
-            temp=0;
-            temp += (PSF[0] * (FLOAT)R[((i-1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[1] * (FLOAT)R[((i-1)*IMG_WIDTH)+j]);
-            temp += (PSF[2] * (FLOAT)R[((i-1)*IMG_WIDTH)+j+1]);
-            temp += (PSF[3] * (FLOAT)R[((i)*IMG_WIDTH)+j-1]);
-            temp += (PSF[4] * (FLOAT)R[((i)*IMG_WIDTH)+j]);
-            temp += (PSF[5] * (FLOAT)R[((i)*IMG_WIDTH)+j+1]);
-            temp += (PSF[6] * (FLOAT)R[((i+1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[7] * (FLOAT)R[((i+1)*IMG_WIDTH)+j]);
-            temp += (PSF[8] * (FLOAT)R[((i+1)*IMG_WIDTH)+j+1]);
-	    if(temp<0.0) temp=0.0;
-	    if(temp>255.0) temp=255.0;
-	    convR[(i*IMG_WIDTH)+j]=(UINT8)temp;
-
-            temp=0;
-            temp += (PSF[0] * (FLOAT)G[((i-1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[1] * (FLOAT)G[((i-1)*IMG_WIDTH)+j]);
-            temp += (PSF[2] * (FLOAT)G[((i-1)*IMG_WIDTH)+j+1]);
-            temp += (PSF[3] * (FLOAT)G[((i)*IMG_WIDTH)+j-1]);
-            temp += (PSF[4] * (FLOAT)G[((i)*IMG_WIDTH)+j]);
-            temp += (PSF[5] * (FLOAT)G[((i)*IMG_WIDTH)+j+1]);
-            temp += (PSF[6] * (FLOAT)G[((i+1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[7] * (FLOAT)G[((i+1)*IMG_WIDTH)+j]);
-            temp += (PSF[8] * (FLOAT)G[((i+1)*IMG_WIDTH)+j+1]);
-	    if(temp<0.0) temp=0.0;
-	    if(temp>255.0) temp=255.0;
-	    convG[(i*IMG_WIDTH)+j]=(UINT8)temp;
-
-            temp=0;
-            temp += (PSF[0] * (FLOAT)B[((i-1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[1] * (FLOAT)B[((i-1)*IMG_WIDTH)+j]);
-            temp += (PSF[2] * (FLOAT)B[((i-1)*IMG_WIDTH)+j+1]);
-            temp += (PSF[3] * (FLOAT)B[((i)*IMG_WIDTH)+j-1]);
-            temp += (PSF[4] * (FLOAT)B[((i)*IMG_WIDTH)+j]);
-            temp += (PSF[5] * (FLOAT)B[((i)*IMG_WIDTH)+j+1]);
-            temp += (PSF[6] * (FLOAT)B[((i+1)*IMG_WIDTH)+j-1]);
-            temp += (PSF[7] * (FLOAT)B[((i+1)*IMG_WIDTH)+j]);
-            temp += (PSF[8] * (FLOAT)B[((i+1)*IMG_WIDTH)+j+1]);
-	    if(temp<0.0) temp=0.0;
-	    if(temp>255.0) temp=255.0;
-	    convB[(i*IMG_WIDTH)+j]=(UINT8)temp;
+            read(fdin, &R[i], 1);
+            read(fdin, &G[i], 1);
+            read(fdin, &B[i], 1);
         }
+        close(fdin);
+
+        sharpen_image();
+
+#ifdef WRITE_IMAGE
+        if ((fdout = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0666)) < 0)
+        {
+            perror("Error opening output file");
+            return -1;
+        }
+
+        write(fdout, header, 21);
+        for (int i = 0; i < IMG_HEIGHT * IMG_WIDTH; i++)
+        {
+            write(fdout, &convR[i], 1);
+            write(fdout, &convG[i], 1);
+            write(fdout, &convB[i], 1);
+        }
+        close(fdout);
+#endif
     }
 
-    write(fdout, (void *)header, 21);
+    clock_gettime(CLOCK_MONOTONIC, &end);
 
-    // Write RGB data
-    for(i=0; i<IMG_HEIGHT*IMG_WIDTH; i++)
-    {
-        write(fdout, (void *)&convR[i], 1);
-        write(fdout, (void *)&convG[i], 1);
-        write(fdout, (void *)&convB[i], 1);
-    }
+    long seconds = end.tv_sec - start.tv_sec;
+    long nanoseconds = end.tv_nsec - start.tv_nsec;
+    double elapsed = seconds + nanoseconds * 1e-9;
 
+    syslog(LOG_CRIT, "Total time for %d iterations: %.3f seconds", NUM_ITERATIONS, elapsed);
+    closelog();
 
-    close(fdin);
-    close(fdout);
- 
+    return 0;
 }
