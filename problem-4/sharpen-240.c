@@ -106,11 +106,11 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    clock_gettime(CLOCK_MONOTONIC, &start);
 
     for (int iteration = 0; iteration < NUM_ITERATIONS; ++iteration)
     {
         printf("Starting iteration %d\n", iteration);
+        clock_gettime(CLOCK_MONOTONIC, &start);
         if ((fdin = open(argv[1], O_RDONLY)) < 0)
         {
             perror("Error opening input file");
@@ -153,15 +153,14 @@ int main(int argc, char *argv[])
         }
         close(fdout);
 #endif
+        clock_gettime(CLOCK_MONOTONIC, &end);
+
+        long seconds = end.tv_sec - start.tv_sec;
+        long nanoseconds = end.tv_nsec - start.tv_nsec;
+        double elapsed = seconds + nanoseconds * 1e-9;
+
+        syslog(LOG_CRIT, "Processing time: %.6f seconds\n", elapsed);
     }
-
-    clock_gettime(CLOCK_MONOTONIC, &end);
-
-    long seconds = end.tv_sec - start.tv_sec;
-    long nanoseconds = end.tv_nsec - start.tv_nsec;
-    double elapsed = seconds + nanoseconds * 1e-9;
-
-    syslog(LOG_CRIT, "Total time for %d iterations: %.3f seconds", NUM_ITERATIONS, elapsed);
 
     return 0;
 }
