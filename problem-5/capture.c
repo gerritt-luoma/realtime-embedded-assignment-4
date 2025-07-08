@@ -391,7 +391,7 @@ static void process_image(const void *p, int size)
     else if(fmt.fmt.pix.pixelformat == V4L2_PIX_FMT_RGB24)
     {
         printf("Dump RGB as-is size %d\n", size);
-        dump_ppm(p, size, framecnt, &frame_time);
+        dump_ppm(p, size, framecnt, &frame_time, 0);
     }
     else
     {
