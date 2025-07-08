@@ -119,14 +119,25 @@ static int xioctl(int fh, int request, void *arg)
 
 char ppm_header[]="P6\n#9999999999 sec 9999999999 msec \n"HRES_STR" "VRES_STR"\n255\n";
 char ppm_dumpname[]="frames/test0000.ppm";
+char ppm_dumpname_sharpened[]="frames/post0000.ppm";
 
-static void dump_ppm(const void *p, int size, unsigned int tag, struct timespec *time)
+static void dump_ppm(const void *p, int size, unsigned int tag, struct timespec *time, int sharpened)
 {
     int written, i, total, dumpfd;
+    char* filename;
 
-    snprintf(&ppm_dumpname[11], 9, "%04d", tag);
-    strncat(&ppm_dumpname[15], ".ppm", 5);
-    dumpfd = open(ppm_dumpname, O_WRONLY | O_NONBLOCK | O_CREAT, 00666);
+    if (sharpened)
+    {
+        filename = ppm_dumpname_sharpened;
+    }
+    else
+    {
+        filename = ppm_dumpname;
+    }
+
+    snprintf(&filename[11], 9, "%04d", tag);
+    strncat(&filename[15], ".ppm", 5);
+    dumpfd = open(filename, O_WRONLY | O_NONBLOCK | O_CREAT, 00666);
 
     snprintf(&ppm_header[4], 11, "%010d", (int)time->tv_sec);
     strncat(&ppm_header[14], " sec ", 5);
@@ -369,7 +380,8 @@ static void process_image(const void *p, int size)
 
         if(framecnt > -1)
         {
-            dump_ppm(bigbuffer_processed, ((size*6)/4), framecnt, &frame_time);
+            dump_ppm(bigbuffer, ((size*6)/4), framecnt, &frame_time, 0);
+            dump_ppm(bigbuffer_processed, ((size*6)/4), framecnt, &frame_time, 1);
             //printf("Dump YUYV converted to RGB size %d\n", size);
         }
 
