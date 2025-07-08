@@ -62,8 +62,8 @@
 //#define FRAMES_PER_SEC (25)
 #define FRAMES_PER_SEC (30)
 
-// #define COLOR_CONVERT_RGB
-// #define DUMP_FRAMES
+#define COLOR_CONVERT_RGB
+#define DUMP_FRAMES
 // #define DUMP_PPM
 
 // Format is used by a number of functions, so made as a file global
@@ -294,6 +294,7 @@ static void process_image(const void *p, int size)
         // Pixels are YU and YV alternating, so YUYV which is 4 bytes
         // We want RGB, so RGBRGB which is 6 bytes
         //
+        printf("Size: %d\n", size);
         for(i=0, newi=0; i<size; i=i+4, newi=newi+6)
         {
             y_temp=(int)pptr[i]; u_temp=(int)pptr[i+1]; y2_temp=(int)pptr[i+2]; v_temp=(int)pptr[i+3];
