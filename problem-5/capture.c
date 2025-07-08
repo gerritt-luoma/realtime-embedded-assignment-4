@@ -62,24 +62,24 @@
 //#define FRAMES_PER_SEC (25)
 #define FRAMES_PER_SEC (30)
 
-#define COLOR_CONVERT_RGB
-#define DUMP_FRAMES
-// #define DUMP_PPM
-
 // Format is used by a number of functions, so made as a file global
 static struct v4l2_format fmt;
 
+#define K 4.0
+
+float PSF[9] = {-K/8.0, -K/8.0, -K/8.0, -K/8.0, K+1.0, -K/8.0, -K/8.0, -K/8.0, -K/8.0};
+
 enum io_method
 {
-        IO_METHOD_READ,
-        IO_METHOD_MMAP,
-        IO_METHOD_USERPTR,
+    IO_METHOD_READ,
+    IO_METHOD_MMAP,
+    IO_METHOD_USERPTR,
 };
 
 struct buffer
 {
-        void   *start;
-        size_t  length;
+    void   *start;
+    size_t  length;
 };
 
 static char            *dev_name;
@@ -254,6 +254,7 @@ void yuv2rgb(int y, int u, int v, unsigned char *r, unsigned char *g, unsigned c
 int framecnt=-8;
 
 unsigned char bigbuffer[(1280*960)];
+unsigned char bigbuffer_processed[(1280*960)];
 
 static void process_image(const void *p, int size)
 {
@@ -274,8 +275,6 @@ static void process_image(const void *p, int size)
         fstart = (double)time_start.tv_sec + (double)time_start.tv_nsec / 1000000000.0;
     }
 
-#ifdef DUMP_FRAMES
-
     // This just dumps the frame to a file now, but you could replace with whatever image
     // processing you wish.
     //
@@ -288,13 +287,9 @@ static void process_image(const void *p, int size)
 
     else if(fmt.fmt.pix.pixelformat == V4L2_PIX_FMT_YUYV)
     {
-
-#if defined(COLOR_CONVERT_RGB)
-
         // Pixels are YU and YV alternating, so YUYV which is 4 bytes
         // We want RGB, so RGBRGB which is 6 bytes
-        //
-        printf("Size: %d\n", size);
+        // First convert to RGB which can then be used for sharpening
         for(i=0, newi=0; i<size; i=i+4, newi=newi+6)
         {
             y_temp=(int)pptr[i]; u_temp=(int)pptr[i+1]; y2_temp=(int)pptr[i+2]; v_temp=(int)pptr[i+3];
@@ -302,33 +297,78 @@ static void process_image(const void *p, int size)
             yuv2rgb(y2_temp, u_temp, v_temp, &bigbuffer[newi+3], &bigbuffer[newi+4], &bigbuffer[newi+5]);
         }
 
-#endif
+        // Skip first and last row, no neighbors to convolve with
+        for(i=1; i<((VRES)-1); i++)
+        {
+            // Skip first and last column, no neighbors to convolve with
+            for(j=1; j<((HRES)-1); j++)
+            {
+                int l1, l2, l3, m1, m2, m3, r1, r2, r3;
+                float temp;
+                // Precompute left column idxs
+                l1 = (((i-1)*HRES)+j-1) * 3;
+                l2 = (((i-1)*HRES)+j)   * 3;
+                l3 = (((i-1)*HRES)+j+1) * 3;
 
+                // Precompute middle column idxs
+                m1 = (((i)*HRES)+j-1) * 3;
+                m1 = (((i)*HRES)+j)   * 3; // Current pixel
+                m1 = (((i)*HRES)+j+1) * 3;
 
-#if defined(DUMP_PPM)
+                // Precompute right column idxs
+                r1 = (((i+1)*HRES)+j-1) * 3;
+                r2 = (((i+1)*HRES)+j)   * 3;
+                r3 = (((i+1)*HRES)+j+1) * 3;
+
+                temp=0;
+                temp += (PSF[0] * (float)bigbuffer[l1]);
+                temp += (PSF[1] * (float)bigbuffer[l2]);
+                temp += (PSF[2] * (float)bigbuffer[l3]);
+                temp += (PSF[3] * (float)bigbuffer[m1]);
+                temp += (PSF[4] * (float)bigbuffer[m1]);
+                temp += (PSF[5] * (float)bigbuffer[m1]);
+                temp += (PSF[6] * (float)bigbuffer[r1]);
+                temp += (PSF[7] * (float)bigbuffer[r2]);
+                temp += (PSF[8] * (float)bigbuffer[r3]);
+                if(temp<0.0) temp=0.0;
+                if(temp>255.0) temp=255.0;
+                bigbuffer_processed[m2]=(unsigned char)temp;
+
+                temp=0;
+                temp += (PSF[0] * (float)bigbuffer[l1 + 1]);
+                temp += (PSF[1] * (float)bigbuffer[l2 + 1]);
+                temp += (PSF[2] * (float)bigbuffer[l3 + 1]);
+                temp += (PSF[3] * (float)bigbuffer[m1 + 1]);
+                temp += (PSF[4] * (float)bigbuffer[m1 + 1]);
+                temp += (PSF[5] * (float)bigbuffer[m1 + 1]);
+                temp += (PSF[6] * (float)bigbuffer[r1 + 1]);
+                temp += (PSF[7] * (float)bigbuffer[r2 + 1]);
+                temp += (PSF[8] * (float)bigbuffer[r3 + 1]);
+                if(temp<0.0) temp=0.0;
+                if(temp>255.0) temp=255.0;
+                bigbuffer_processed[m2 + 1]=(unsigned char)temp;
+
+                temp=0;
+                temp += (PSF[0] * (float)bigbuffer[l1 + 2]);
+                temp += (PSF[1] * (float)bigbuffer[l2 + 2]);
+                temp += (PSF[2] * (float)bigbuffer[l3 + 2]);
+                temp += (PSF[3] * (float)bigbuffer[m1 + 2]);
+                temp += (PSF[4] * (float)bigbuffer[m1 + 2]);
+                temp += (PSF[5] * (float)bigbuffer[m1 + 2]);
+                temp += (PSF[6] * (float)bigbuffer[r1 + 2]);
+                temp += (PSF[7] * (float)bigbuffer[r2 + 2]);
+                temp += (PSF[8] * (float)bigbuffer[r3 + 2]);
+                if(temp<0.0) temp=0.0;
+                if(temp>255.0) temp=255.0;
+                bigbuffer_processed[(i*IMG_WIDTH)+j]=(unsigned char)temp;
+            }
+        }
+
         if(framecnt > -1)
         {
-            dump_ppm(bigbuffer, ((size*6)/4), framecnt, &frame_time);
+            dump_ppm(bigbuffer_processed, ((size*6)/4), framecnt, &frame_time);
             //printf("Dump YUYV converted to RGB size %d\n", size);
         }
-#else
-
-        // Pixels are YU and YV alternating, so YUYV which is 4 bytes
-        // We want Y, so YY which is 2 bytes
-        //
-        for(i=0, newi=0; i<size; i=i+4, newi=newi+2)
-        {
-            // Y1=first byte and Y2=third byte
-            bigbuffer[newi]=pptr[i];
-            bigbuffer[newi+1]=pptr[i+2];
-        }
-
-        if(framecnt > -1)
-        {
-            dump_pgm(bigbuffer, (size/2), framecnt, &frame_time);
-            //printf("Dump YUYV converted to YY size %d\n", size);
-        }
-#endif
 
 
     }
@@ -342,8 +382,6 @@ static void process_image(const void *p, int size)
     {
         printf("ERROR - unknown dump format\n");
     }
-
-#endif
 
 }
 
