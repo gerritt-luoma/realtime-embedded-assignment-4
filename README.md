@@ -436,6 +436,68 @@ These results show that, on average, the longest running part of the program is 
 
 > B: Please implement and compare transform performance in terms of average frame rate for transformation and write-back of both the transformed frame and captured.
 
-I have added in a new flag to the program, `DUMP_RGB`, that will cause the program to save both the regular unsharpened image and the processed sharpened image to the file system each iteration.  The base RGB frames are saved under the names `testXXXX.ppm` in the `frames/` directory.
+I have added in a new flag to the program, `DUMP_RGB`, that will cause the program to save both the regular unsharpened image and the processed sharpened image to the file system each iteration.  The base RGB frames are saved under the names `testXXXX.ppm` in the `frames/` directory.  The output from this test run was as follows:
+
+```bash
+$ sudo ./capture
+FORCING FORMAT
+allocated buffer 0
+allocated buffer 1
+allocated buffer 2
+allocated buffer 3
+allocated buffer 4
+allocated buffer 5
+Running at 30 frames/sec
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 84067.081015
+at 84067.128470
+Total capture time=120.499455, for 1802 frames, 14.946126 FPS
+```
+
+As you can see, when writing both frames to memory the average frames per second takes a considerable hit dropping almost 5 frames per second.  While the program was running, I was noticing that the syslog output was lagging consistently.  I believe this was because of the fact the program was writing double the amount of files causing the flash sector erases to become more frequent.  Below is the output of running the `analyze_logs.py` program on the `transform-and-original-write.log` output:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze: transform-and-original-writeback.log
+
+--- Statistics for Image Acquisition Time ---
+Mean: 0.000015 seconds
+Min: 0.000008 seconds
+Median: 0.000014 seconds
+Max: 0.000079 seconds
+-----------------------------------
+
+--- Statistics for Image Conversion Time ---
+Mean: 0.008870 seconds
+Min: 0.008339 seconds
+Median: 0.008460 seconds
+Max: 0.031969 seconds
+-----------------------------------
+
+--- Statistics for Image Write Time ---
+Mean: 0.023965 seconds
+Min: 0.003164 seconds
+Median: 0.003763 seconds
+Max: 2.343479 seconds
+-----------------------------------
+
+--- Statistics for Total Time Per Frame (Combined) ---
+Mean: 0.032850 seconds
+Min: 0.011628 seconds
+Median: 0.012484 seconds
+Max: 2.351889 seconds
+-----------------------------------
+
+Estimated Frames Per Second (FPS): 30.44
+```
+
+The time taken for acquiring the image and converting the image remained roughly the same compared to the prevous run which was expected.  The average time for writing the files to the filesystem have more than tripled, however, due to the flash sector erases.  Because of this, the theoretical average frame rate for the program was 30.44 FPS but it would have had multiple missed deadlines throughout the course of the program.
 
 > C: Based on average analysis for transform frame only write-back, pick a reasonable soft real-time deadline (e.g., if average frame rate is 10 Hz, choose a deadline of 100 milliseconds) and convert the processing to SCHED_FIFO and determine if you can meet deadlines with predictability. Note, here are some examples of monotonic service analysis and jitter (here). The drift is shown as a red polynomial trend line and jitter is a plot of raw delta-t data compared to expected.
+
