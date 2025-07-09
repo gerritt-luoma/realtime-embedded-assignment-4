@@ -1,5 +1,6 @@
-# realtime-embedded-assignment-4
-Repository for the fourth assignment of CU Boulder's Real Time Embedded Systems course
+# Assignment 4
+
+Gerritt Luoma
 
 ## Problem 1
 
