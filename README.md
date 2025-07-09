@@ -501,3 +501,66 @@ The time taken for acquiring the image and converting the image remained roughly
 
 > C: Based on average analysis for transform frame only write-back, pick a reasonable soft real-time deadline (e.g., if average frame rate is 10 Hz, choose a deadline of 100 milliseconds) and convert the processing to SCHED_FIFO and determine if you can meet deadlines with predictability. Note, here are some examples of monotonic service analysis and jitter (here). The drift is shown as a red polynomial trend line and jitter is a plot of raw delta-t data compared to expected.
 
+I have created a new file in the `problem-5/` directory named `capture-srt.c`. This is a combination of the `capture.c` file in the same directory and my code from problem 5 of assignment three which was based off Prof. Siewert's `seqgen3.c` example code.  I have turned the main thread into a `SCHED_FIFO` pthread and have changed the `mainloop()` function to wait on a semaphore for it to be released by a sequencer.  I am then creating a sequencer that runs based off a timer firing at a rate of 20 Hz which will release the main thread each time the sequencer runs.
+
+I am choosing a deadline of 50ms, or a frequency of 20Hz for the image processing thread.  I am pickign this deadline because even though the code was running at ~19FPS in my previous test runs, I believe part of the lower FPS was due to the scheduling being done my a `nanosleep()` call that didn't take into account the time taken to process the image each iteration leading to the thread running slower than it potentially could have been.  After running the program I received the following in standard output:
+
+```bash
+$ sudo ./capture-srt 
+FORCING FORMAT
+allocated buffer 0
+allocated buffer 1
+allocated buffer 2
+allocated buffer 3
+allocated buffer 4
+allocated buffer 5
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 89573.814515
+at 89573.851423
+Total capture time=90.062120, for 1802 frames, 19.997308 FPS
+```
+
+This is showing that the thread is running almost exactly at 20 Hz which is what I programmed the sequencer to run at which seems to be promising.  I also captured the system logs for the program and analyzed them using my `analyze_logs.py` program:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze: soft-realtime.log
+
+--- Statistics for Image Acquisition Time ---
+Mean: 0.000016 seconds
+Min: 0.000004 seconds
+Median: 0.000015 seconds
+Max: 0.000078 seconds
+-----------------------------------
+
+--- Statistics for Image Conversion Time ---
+Mean: 0.008701 seconds
+Min: 0.008278 seconds
+Median: 0.008369 seconds
+Max: 0.029224 seconds
+-----------------------------------
+
+--- Statistics for Image Write Time ---
+Mean: 0.006352 seconds
+Min: 0.001552 seconds
+Median: 0.001889 seconds
+Max: 1.510366 seconds
+-----------------------------------
+
+--- Statistics for Total Time Per Frame (Combined) ---
+Mean: 0.015071 seconds
+Min: 0.009942 seconds
+Median: 0.010296 seconds
+Max: 1.518755 seconds
+-----------------------------------
+
+Estimated Frames Per Second (FPS): 66.35
+```
+
+We can see that the average time spent processing the images was 0.015071 seconds which would come out to an average of 66.35 FPS if the thread wasn't gated by the semaphore.  This average processing time is well below the deadline of 0.05 seconds to achieve a frame rate of 20 Hz.  It should be noted that the maximum write time is still 1.5 seconds which means at least one deadline was missed over the course of the run.  I have confirmed that all 1802 frames are present in the frames directory meaning all frames were captured and stored despite having at least one missing deadline.

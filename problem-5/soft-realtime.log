@@ -1,13 +1,3 @@
-Jul 09 00:01:42 arthur capture-srt[48529]: SIMPCAP: acquired image in 0.000012 seconds
-Jul 09 00:01:42 arthur capture-srt[48529]: SIMPCAP: converted to sharpened image in 0.008370 seconds
-Jul 09 00:01:44 arthur capture-srt[48529]: SIMPCAP: wrote image(s) in 1.821325 seconds
-Jul 09 00:01:44 arthur capture-srt[48529]: SIMPCAP: read at 90.259075, @ 19.610216 FPS
-Jul 09 00:01:44 arthur sudo[48527]: pam_unix(sudo:session): session closed for user root
-Jul 09 00:03:17 arthur dbus-daemon[2054]: [session uid=1000 pid=2054] Activating service name='org.xfce.Xfconf' requested by ':1.13' (uid=1000 pid=2208 comm="xfce4-panel")
-Jul 09 00:03:17 arthur dbus-daemon[2054]: [session uid=1000 pid=2054] Successfully activated service 'org.xfce.Xfconf'
-Jul 09 00:05:01 arthur CRON[53872]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-Jul 09 00:05:01 arthur CRON[53873]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
-Jul 09 00:05:01 arthur CRON[53872]: pam_unix(cron:session): session closed for user root
 Jul 09 00:07:50 arthur sudo[53899]:  gerritt : TTY=pts/0 ; PWD=/home/gerritt/repos/realtime-embedded-assignment-4/problem-5 ; USER=root ; COMMAND=./capture-srt
 Jul 09 00:07:50 arthur sudo[53899]: pam_unix(sudo:session): session opened for user root(uid=0) by gerritt(uid=1000)
 Jul 09 00:07:50 arthur kernel: usb 1-1.1: reset high-speed USB device number 3 using xhci_hcd
