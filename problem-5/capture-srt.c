@@ -38,6 +38,7 @@
 #include <sched.h>
 #include <time.h>
 #include <semaphore.h>
+#include <signal.h>
 
 #include <linux/videodev2.h>
 
@@ -128,6 +129,7 @@ static struct timespec time_now, time_start, time_stop;
 
 void Sequencer(int id)
 {
+    int flags = 0;
     seqCnt++;
 
     // Release the semaphore every iteration
