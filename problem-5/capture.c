@@ -401,8 +401,6 @@ static void process_image(const void *p, int size)
             writeback_stop_time  = (double)writeback_stop.tv_sec  + (double)writeback_stop.tv_nsec / 1000000000.0;
             syslog(LOG_CRIT, "SIMPCAP: wrote image(s) in %.6f seconds\n", (writeback_stop_time-writeback_start_time));
         }
-
-
     }
 
     else if(fmt.fmt.pix.pixelformat == V4L2_PIX_FMT_RGB24)

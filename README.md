@@ -362,14 +362,80 @@ This is a much better performance simply by adding the `-O3` comiler flag.  I am
 
 > Using a Logitech C270 (or equivalent), choose ONE real-time frame transformation and measure the frame processing time (WCET). I have made some videos on the “L-N9.#-Final-Project” (found in Lightboard-Studio-rough-cuts) that demonstrate the analysis of a single thread design (simple-capture-1800) and use of syslog for tracing (CW21-C4-simplecapture-1800-starter-code-for-project) and you may also find simple-capture1800-syslog/ useful.
 
-TODO:
-
 > A: Please implement and compare transform performance in terms of average transform processing time and overall average frame rate for acquisition, transformation and writeback of only the transformed frame. Note the average for each step clearly (acquisition, processing, write-back).
 
-TODO:
+I have rewritten the sharpening starter code to instead be ran within the provided `simple-capture-1800-syslog` code.  For the sharpening to work, at least how it was provided, the image must first be converted from YUYV to RGB.  Once the image is in RGB, it is sharpened using the provided algorithm.  I had to update the algorithm to handle the RGB channels all being in the same contiguous array of data which for the most part was reducing the number of multiplications and updating the indexes for the convolution of pixels.
+
+When the program runs, it sharpens each frame and stores them into the `frames/` directory under the name `postXXXX.ppm` with XXXX incrementing each frame.
+
+I have added in a new `analyze_logs.py` file and have saved the system logs of a run of just saving the transformed image.  When the run completed, the c program showed the following stats:
+
+```bash
+$ sudo ./capture 
+FORCING FORMAT
+allocated buffer 0
+allocated buffer 1
+allocated buffer 2
+allocated buffer 3
+allocated buffer 4
+allocated buffer 5
+Running at 30 frames/sec
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 0.000000
+at 82971.075102
+at 82971.119398
+Total capture time=90.540054, for 1802 frames, 19.891749 FPS
+```
+
+The C program showd that the average frames per second over the course of the program were 19.891749 frames per second.  After running the system logs through my analyzing script, it showed the following:
+
+```bash
+$ python3 analyze_logs.py
+Please enter the name of the log file to analyze: transform-writeback.log
+
+--- Statistics for Image Acquisition Time ---
+Mean: 0.000017 seconds
+Min: 0.000008 seconds
+Median: 0.000015 seconds
+Max: 0.000095 seconds
+-----------------------------------
+
+--- Statistics for Image Conversion Time ---
+Mean: 0.008994 seconds
+Min: 0.008300 seconds
+Median: 0.008422 seconds
+Max: 0.025906 seconds
+-----------------------------------
+
+--- Statistics for Image Write Time ---
+Mean: 0.007305 seconds
+Min: 0.001534 seconds
+Median: 0.001998 seconds
+Max: 2.200303 seconds
+-----------------------------------
+
+--- Statistics for Total Time Per Frame (Combined) ---
+Mean: 0.016318 seconds
+Min: 0.009946 seconds
+Median: 0.010598 seconds
+Max: 2.208707 seconds
+-----------------------------------
+
+Estimated Frames Per Second (FPS): 61.28
+```
+
+These results show that, on average, the longest running part of the program is the conversion from YUYV to RGB to Sharpened RGB with an average time of 0.008994 seconds.  The worst case time, however, comes from the image write back step of the processing loop with a worst case time of 2.208707 seconds.  This most likely occurs when the flash needs to perform a sector erase before it can be written to causing the system to seize up.  That being said, when averaging together the total processing time of each frame the estimated possible frames per second is 61.28 frames per second.  This is much higher than the FPS reported by the program at runtime, 19.89 FPS, most likely because of two reasons:
+
+1. The camera being used is only able to support a maximum frame rate of 30 FPS.  Any faster and the camera will be the main limiting factor of the program.
+2. The current method of timing for the program is using `nanosleep()` to always sleep enough time per iteration to cause the maximum frame rate of the program to be 30 FPS.  The issue here is that it is not accounting for the processing time of the frames so if a frame took up half of that iteration's 30 FPS time window, the program will still perform the full sleep causing the timing of the thread to be much slower.
 
 > B: Please implement and compare transform performance in terms of average frame rate for transformation and write-back of both the transformed frame and captured.
 
-TODO:
+I have added in a new flag to the program, `DUMP_RGB`, that will cause the program to save both the regular unsharpened image and the processed sharpened image to the file system each iteration.  The base RGB frames are saved under the names `testXXXX.ppm` in the `frames/` directory.
 
 > C: Based on average analysis for transform frame only write-back, pick a reasonable soft real-time deadline (e.g., if average frame rate is 10 Hz, choose a deadline of 100 milliseconds) and convert the processing to SCHED_FIFO and determine if you can meet deadlines with predictability. Note, here are some examples of monotonic service analysis and jitter (here). The drift is shown as a red polynomial trend line and jitter is a plot of raw delta-t data compared to expected.
