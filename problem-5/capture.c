@@ -269,7 +269,7 @@ unsigned char bigbuffer_processed[(1280*960)];
 
 static void process_image(const void *p, int size)
 {
-    int i, newi, newsize=0;
+    int i, j, newi, newsize=0;
     struct timespec frame_time;
     int y_temp, y2_temp, u_temp, v_temp;
     unsigned char *pptr = (unsigned char *)p;
@@ -310,29 +310,29 @@ static void process_image(const void *p, int size)
             yuv2rgb(y_temp, u_temp, v_temp, &bigbuffer[newi], &bigbuffer[newi+1], &bigbuffer[newi+2]);
             yuv2rgb(y2_temp, u_temp, v_temp, &bigbuffer[newi+3], &bigbuffer[newi+4], &bigbuffer[newi+5]);
         }
+        int l1, l2, l3, m1, m2, m3, r1, r2, r3;
+        float temp;
 
         // Skip first and last row, no neighbors to convolve with
-        for(int i=1; i<((VRES)-1); i++)
+        for(i=1; i<((VRES)-1); i++)
         {
             // Skip first and last column, no neighbors to convolve with
-            for(int j=1; j<((HRES)-1); j++)
+            for(j=1; j<((HRES)-1); j++)
             {
-                int l1, l2, l3, m1, m2, m3, r1, r2, r3;
-                float temp;
                 // Precompute left column idxs
                 l1 = (((i-1)*HRES)+j-1) * 3;
-                l2 = (((i-1)*HRES)+j)   * 3;
-                l3 = (((i-1)*HRES)+j+1) * 3;
+                l2 = l1 + 3;
+                l3 = l2 + 3;
 
                 // Precompute middle column idxs
                 m1 = (((i)*HRES)+j-1) * 3;
-                m2 = (((i)*HRES)+j)   * 3; // Current pixel
-                m3 = (((i)*HRES)+j+1) * 3;
+                m2 = m1 + 3; // Current pixel
+                m3 = m2 + 3;
 
                 // Precompute right column idxs
                 r1 = (((i+1)*HRES)+j-1) * 3;
-                r2 = (((i+1)*HRES)+j)   * 3;
-                r3 = (((i+1)*HRES)+j+1) * 3;
+                r2 = r1 + 3;
+                r3 = r2 + 3;
 
                 // Process all of the reds
                 temp=0;
