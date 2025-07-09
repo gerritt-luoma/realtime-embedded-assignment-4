@@ -7,22 +7,22 @@ CFLAGS= -O3 -g -Wcpp $(INCLUDE_DIRS) $(CDEFS)
 LIBS= -lrt -lpthread
 
 HFILES= 
-CFILES= capture.c capture-lrt.c
+CFILES= capture.c capture-srt.c
 
 SRCS= ${HFILES} ${CFILES}
 OBJS= ${CFILES:.c=.o}
 
-all:	capture capture-lrt
+all:	capture capture-srt
 
 clean:
-	-rm -f *.o *.d capture capture-lrt
+	-rm -f *.o *.d capture capture-srt
 	-rm -f frames/*
 
 distclean:
 	-rm -f *.o *.d
 
 %: %.o
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o $(LIBS)
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $< $(LIBS)
 
 depend:
 
